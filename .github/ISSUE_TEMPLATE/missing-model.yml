@@ -1,0 +1,38 @@
+name: Missing model
+description: Suggest a DNA, RNA, or unified nucleotide sequence language model
+title: "[Model]: "
+labels: [candidate]
+body:
+  - type: markdown
+    attributes:
+      value: Please check the catalog, aliases, candidates, and exclusions before submitting.
+  - type: input
+    id: name
+    attributes:
+      label: Model name
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Primary paper or model-release URL
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options: [DNA, RNA, DNA + RNA]
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Why it belongs
+      description: Describe the raw nucleotide pre-training, reusable model/checkpoint, and earliest public date.
+    validations:
+      required: true
+  - type: input
+    id: code
+    attributes:
+      label: Official code or checkpoint URL

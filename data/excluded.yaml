@@ -1,0 +1,96 @@
+# Borderline or frequently suggested entries excluded by the nucleotide-sequence language-model scope.
+- name: miRBind2
+  title: miRBind2 enables sequence-only prediction of miRNA binding and transcript repression
+  paper_url: https://www.biorxiv.org/content/10.64898/2026.03.19.712027v1
+  date: '2026.03'
+  reason: A supervised miRNA-binding and repression predictor, not a reusable pre-trained nucleotide language-model backbone.
+- name: CodonMoE
+  title: DNA Language Models for mRNA Analyses
+  paper_url: https://openreview.net/forum?id=TOUrnb1EaG
+  date: '2024.09'
+  reason: An analysis and mixture of existing DNA language models for mRNA tasks without a distinct nucleotide pre-training contribution.
+- name: OPED
+  title: Design of prime-editing guide RNAs with deep transfer learning
+  paper_url: https://www.nature.com/articles/s42256-023-00739-w
+  date: '2023.11'
+  reason: A task-specific guide-RNA efficiency and design predictor rather than a reusable nucleotide sequence language model.
+- name: RibonanzaNet
+  title: 'Ribonanza: deep learning of RNA structure through dual crowdsourcing'
+  paper_url: https://www.biorxiv.org/content/10.1101/2024.02.24.581671v1
+  date: '2024.02'
+  reason: A supervised chemical-mapping and structure system; it does not introduce a reusable RNA language-model pre-training stage.
+- name: UTR-Insight
+  title: 'UTR-Insight: integrating deep learning for efficient 5′ UTR discovery and design'
+  paper_url: https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-025-11269-7
+  date: '2025.02'
+  reason: A downstream screening workflow that composes existing components rather than releasing a new pre-trained nucleotide backbone.
+- name: RiboDiffusion
+  title: 'RiboDiffusion: tertiary structure-based RNA inverse folding with generative diffusion models'
+  paper_url: https://academic.oup.com/bioinformatics/article/40/Supplement_1/i347/7700903
+  date: '2024.06'
+  reason: A tertiary-structure-conditioned inverse-folding system rather than a nucleotide language model trained on raw sequence corpora.
+- name: RNA-TorsionBERT
+  title: 'RNA-TorsionBERT: leveraging language models for RNA 3D torsion angles prediction'
+  paper_url: https://doi.org/10.1093/bioinformatics/btaf004
+  date: '2024.12'
+  reason: A task-specific RNA three-dimensional geometry predictor that uses language-model features but does not release a new sequence backbone.
+- name: RhoFold+
+  title: Accurate RNA 3D structure prediction using a language model-based deep learning approach
+  paper_url: https://www.nature.com/articles/s41592-024-02487-0
+  date: '2024.11'
+  reason: An RNA structure-prediction system built around model features, not a new general nucleotide sequence language model.
+- name: RhoDesign
+  title: Deep generative design of RNA aptamers using structural predictions
+  paper_url: https://www.nature.com/articles/s43588-024-00720-6
+  date: '2024.11'
+  reason: A structure-conditioned aptamer design pipeline rather than a raw-sequence language-model pre-training contribution.
+- name: MOJO
+  title: 'MOJO: A Multi-omics Foundation Model for RNA-seq and Methylation'
+  paper_url: https://www.biorxiv.org/content/10.1101/2025.06.25.661237v1
+  date: '2025.06'
+  reason: Learns from expression and methylation profiles, not raw nucleotide sequences.
+- name: BulkRNABert
+  title: 'BulkRNABert: A Pre-trained Model for Bulk RNA-seq Expression Data'
+  paper_url: https://www.biorxiv.org/content/10.1101/2024.06.18.599483v2
+  date: '2024.06'
+  reason: Models bulk RNA-seq expression features rather than RNA nucleotide strings.
+- name: Exai-1
+  title: A multimodal cell-free RNA language model for liquid biopsy applications
+  paper_url: https://doi.org/10.1038/s42256-025-01148-x
+  date: '2025.12'
+  reason: Its primary learned tokens are cfRNA abundance profiles; sequence embeddings are inputs rather than a newly pre-trained raw-RNA backbone.
+- name: CpGPT
+  title: 'CpGPT: a Foundation Model for DNA Methylation'
+  paper_url: https://doi.org/10.1101/2024.10.24.619766
+  date: '2024.10'
+  reason: Models single-cell methylation states and profiles rather than raw DNA sequence language.
+- name: MethylGPT
+  title: 'MethylGPT: a foundation model for the DNA methylome'
+  paper_url: https://doi.org/10.1101/2024.10.30.621013
+  date: '2024.11'
+  reason: A methylome-profile foundation model, not a nucleotide sequence language model.
+- name: gLM
+  title: Genomic language model predicts protein co-regulation and function
+  paper_url: https://doi.org/10.1038/s41467-024-46947-9
+  date: '2024.04'
+  reason: Models gene neighborhoods using protein-derived gene tokens rather than raw DNA or RNA nucleotides; gLM2 is cataloged separately because it adds nucleotide sequence tokens.
+- name: ViraLM
+  title: 'ViraLM: empowering virus discovery through the genome foundation model'
+  paper_url: https://doi.org/10.1093/bioinformatics/btae704
+  date: '2024.11'
+  reason: A virus-discovery classifier adapted from an existing genome foundation model without a distinct large-scale nucleotide pre-training release.
+- name: PathoLM
+  title: 'PathoLM: Identifying pathogenicity from the DNA sequence through the Genome Foundation Model'
+  paper_url: https://arxiv.org/abs/2406.13133
+  date: '2024.06'
+  reason: A task-specific pathogenicity predictor built on an existing genome foundation model.
+- name: Enformer
+  title: Effective gene expression prediction from sequence by integrating long-range interactions
+  paper_url: https://doi.org/10.1038/s41592-021-01252-x
+  date: '2021.10'
+  reason: A supervised sequence-to-function predictor without self-supervised nucleotide language-model pre-training.
+- name: AlphaGenome
+  title: AlphaGenome
+  paper_url: https://deepmind.google/discover/blog/alphagenome-ai-for-better-understanding-the-genome/
+  date: '2025.06'
+  reason: A supervised genome-to-function foundation predictor, not a nucleotide language model under this catalog's pre-training definition.

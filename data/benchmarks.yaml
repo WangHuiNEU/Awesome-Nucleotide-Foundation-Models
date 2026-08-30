@@ -1,0 +1,112 @@
+- name: GUE
+  title: Genome Understanding Evaluation from DNABERT-2
+  url: https://arxiv.org/abs/2306.15006
+  date: '2023.06'
+  domains: [dna]
+  code_url: https://github.com/MAGICS-LAB/DNABERT_2
+  summary: A collection of 28 datasets across seven genome-analysis task categories introduced with DNABERT-2.
+- name: BEND
+  title: 'BEND: Benchmarking DNA Language Models on Biologically Meaningful Tasks'
+  url: https://arxiv.org/abs/2311.12570
+  date: '2023.11'
+  domains: [dna]
+  code_url: https://github.com/frederikkemarin/BEND
+  summary: Evaluates DNA language models on gene finding, regulatory annotation and variant-effect tasks with biologically meaningful splits.
+- name: DART-Eval
+  title: 'DART-Eval: A Comprehensive DNA Language Model Evaluation Benchmark on Regulatory DNA'
+  url: https://doi.org/10.52202/079017-1981
+  date: '2024.01'
+  domains: [dna]
+  code_url: null
+  summary: Tests zero-shot and fine-tuned DNA model representations on regulatory-element, motif and activity-prediction tasks.
+- name: BEACON
+  title: 'BEACON: Benchmark for Comprehensive RNA Tasks and Language Models'
+  url: https://doi.org/10.1101/2024.06.22.600190
+  date: '2024.06'
+  domains: [rna]
+  code_url: https://github.com/terry-r123/RNABenchmark
+  summary: A broad RNA benchmark spanning structural, functional and engineering task categories.
+- name: DNA FM Benchmark
+  title: Benchmarking DNA Foundation Models for Genomic and Genetic Tasks
+  url: https://doi.org/10.1038/s41467-025-65823-8
+  date: '2024.08'
+  domains: [dna]
+  code_url: null
+  summary: A systematic comparison of DNA foundation models across genomic and genetic prediction settings.
+- name: OmniGenBench
+  title: 'OmniGenBench: Automating Large-scale in-silico Benchmarking for Genomic Foundation Models'
+  url: https://arxiv.org/abs/2410.01784
+  date: '2024.10'
+  domains: [dna, rna, dna_rna]
+  code_url: https://github.com/yangheng95/OmniGenBench
+  summary: An automated framework for reproducible large-scale training, evaluation and comparison of genomic foundation models.
+- name: RNA LLM Folding
+  title: Comprehensive Benchmarking of Large Language Models for RNA Secondary Structure Prediction
+  url: https://doi.org/10.1093/bib/bbaf137
+  date: '2025.03'
+  domains: [rna]
+  code_url: https://github.com/sinc-lab/rna-llm-folding
+  summary: Compares RNA language models on secondary-structure prediction across multiple datasets and evaluation protocols.
+- name: RNA 3D Benchmark
+  title: Comprehensive Benchmark for RNA 3D Structure-Function Modeling
+  url: https://arxiv.org/abs/2503.21681
+  date: '2025.03'
+  domains: [rna]
+  code_url: null
+  summary: Evaluates sequence and structure models on RNA tertiary-structure and structure-function tasks.
+- name: DNALongBench
+  title: 'DNALongBench: Benchmarking Long-range Genomic Tasks'
+  url: https://www.nature.com/articles/s41467-025-65077-4
+  date: '2025.06'
+  domains: [dna]
+  code_url: null
+  summary: Focuses on long-range genomic tasks with inputs extending to hundreds of kilobases and beyond.
+- name: RNAGym
+  title: 'RNAGym: A Benchmark for RNA Fitness and Structure Prediction'
+  url: https://doi.org/10.1101/2025.06.16.660049
+  date: '2025.06'
+  domains: [rna]
+  code_url: null
+  summary: Standardizes evaluation of RNA models on fitness landscapes and two- and three-dimensional structure prediction.
+- name: Genomic Touchstone
+  title: 'Genomic Touchstone: Benchmarking Genomic Language Models in the Context of the Central Dogma'
+  url: https://doi.org/10.1101/2025.06.25.661622
+  date: '2025.06'
+  domains: [dna, rna, dna_rna]
+  code_url: null
+  summary: Evaluates genomic language models across tasks linked by information flow from genome to transcript and protein.
+- name: mRNABench
+  title: 'mRNABench: Benchmarking Nucleotide Foundation Models on Mature mRNA Tasks'
+  url: https://doi.org/10.1101/2025.07.05.662870
+  date: '2025.07'
+  domains: [rna]
+  code_url: https://github.com/morrislab/mRNABench
+  summary: Covers mature-mRNA properties such as stability and translation efficiency across many datasets and task formulations.
+- name: RNAscope
+  title: 'RNAscope: Comprehensive Benchmark for RNA Foundation Models'
+  url: https://openreview.net/forum?id=zYAuJxcl2E
+  date: '2025.10'
+  domains: [rna]
+  code_url: null
+  summary: Evaluates RNA foundation models across structure, interaction and function tasks in a unified experimental suite.
+- name: NABench
+  title: 'NABench: Large-Scale Benchmarks of Nucleotide Foundation Models for Fitness Prediction'
+  url: https://arxiv.org/abs/2511.02888
+  date: '2025.11'
+  domains: [dna, rna, dna_rna]
+  code_url: null
+  summary: A large nucleotide fitness benchmark with millions of variants across more than 160 experimental conditions.
+- name: Genomic LM RNA Evaluation
+  title: Benchmarking Pre-trained Genomic Language Models for RNA Sequence-related Predictive Applications
+  url: https://doi.org/10.1038/s41467-025-66899-y
+  date: '2025.12'
+  domains: [dna, rna, dna_rna]
+  code_url: null
+  summary: Tests DNA and genomic language models on RNA-related tasks including splicing, modification and translation.
+- name: RNA Zero-shot Benchmark
+  title: Zero-shot Benchmarking of RNA Language Models in Structural, Functional, and Evolutionary Learning
+  url: https://doi.org/10.1093/bib/bbag098
+  date: '2026.02'
+  domains: [rna]
+  code_url: null
+  summary: Measures how well frozen RNA language models transfer without supervised fine-tuning across complementary task families.

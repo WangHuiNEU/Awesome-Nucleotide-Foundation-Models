@@ -1,0 +1,42 @@
+- name: Transformers and Beyond
+  title: 'To Transformers and Beyond: Large Language Models for the Genome'
+  url: https://arxiv.org/abs/2311.07621
+  date: '2023.11'
+  domains: [dna]
+  summary: Reviews genome language-model architectures, tokenization, training data and long-context challenges.
+- name: Genomic LMs
+  title: 'Genomic Language Models: Opportunities and Challenges'
+  url: https://doi.org/10.1016/j.tig.2024.11.013
+  date: '2025.01'
+  domains: [dna, dna_rna]
+  summary: A perspective on what genomic language models learn, where they transfer and which biological and technical gaps remain.
+- name: Nucleotide Transformer Review
+  title: A Review on the Applications of Transformer-based Language Models for Nucleotide Sequence Analysis
+  url: https://doi.org/10.1016/j.csbj.2025.03.024
+  date: '2025.03'
+  domains: [dna, rna, dna_rna]
+  summary: Surveys transformer language models and applications across DNA and RNA sequence analysis.
+- name: Comparative RNA LM Review
+  title: A Comparative Review of RNA Language Models
+  url: https://arxiv.org/abs/2505.09087
+  date: '2025.05'
+  domains: [rna]
+  summary: Compares RNA model architectures, pre-training strategies, tokenization and downstream evaluation.
+- name: LLMs in Bioinformatics
+  title: 'Large Language Models in Bioinformatics: A Survey'
+  url: https://aclanthology.org/2025.findings-acl.184/
+  date: '2025.07'
+  domains: [dna, rna, dna_rna]
+  summary: Places nucleotide models within the broader landscape of language models for biological data and bioinformatics.
+- name: DNA Dialect
+  title: 'The DNA Dialect: A Comprehensive Guide to Pretrained Genomic Language Models'
+  url: https://doi.org/10.1038/s44320-025-00184-4
+  date: '2026.01'
+  domains: [dna]
+  summary: A practical guide to pretrained genomic language models, their representations, evaluation and use.
+- name: Genome LM Survey
+  title: A Comprehensive Survey of Genome Language Models in Bioinformatics
+  url: https://doi.org/10.1093/bib/bbaf724
+  date: '2026.01'
+  domains: [dna, rna, dna_rna]
+  summary: A broad taxonomy of DNA and RNA genome language models, datasets, objectives, benchmarks and open challenges.

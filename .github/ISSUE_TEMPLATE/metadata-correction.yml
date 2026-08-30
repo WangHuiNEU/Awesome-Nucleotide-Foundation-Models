@@ -1,0 +1,23 @@
+name: Metadata correction
+description: Report an inaccurate field, link, date, or classification
+title: "[Correction]: "
+labels: [metadata]
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model or resource
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Primary source supporting the correction
+    validations:
+      required: true

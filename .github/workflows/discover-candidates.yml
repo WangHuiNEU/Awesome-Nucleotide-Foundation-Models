@@ -1,0 +1,67 @@
+name: Discover nucleotide model candidates
+
+on:
+  workflow_dispatch:
+    inputs:
+      lookback_days:
+        description: Days of recent literature to scan
+        required: false
+        default: "60"
+  schedule:
+    - cron: "0 3 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Discover review candidates
+        run: |
+          LOOKBACK_DAYS="${{ inputs.lookback_days || '60' }}"
+          python scripts/discover_candidates.py --lookback-days "$LOOKBACK_DAYS" --update
+
+      - name: Refresh candidate hints
+        run: python scripts/classify_candidates.py --update
+
+      - name: Validate catalog and candidate queue
+        run: python scripts/validate_data.py
+
+      - name: Create candidate-review pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$(git status --porcelain data/candidates.yaml)" ]; then
+            echo "No new candidates."
+            exit 0
+          fi
+
+          UPDATE_BRANCH="bot/update-nucleotide-candidates"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -B "$UPDATE_BRANCH"
+          git add data/candidates.yaml
+          git commit -m "Update nucleotide model candidates"
+          git push --force origin "HEAD:$UPDATE_BRANCH"
+
+          PR_BODY="Automated literature discovery found possible DNA, RNA, or unified nucleotide-model papers. The bot changed only data/candidates.yaml. Please verify scope, dates, links, model metadata, and duplication before manually promoting any record to data/models.yaml."
+
+          if gh pr view "$UPDATE_BRANCH" --json url --jq .url >/dev/null 2>&1; then
+            gh pr edit "$UPDATE_BRANCH" --title "Review nucleotide model candidates" --body "$PR_BODY"
+          else
+            gh pr create --base main --head "$UPDATE_BRANCH" --title "Review nucleotide model candidates" --body "$PR_BODY"
+          fi

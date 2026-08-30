@@ -1,0 +1,2264 @@
+- name: DNABERT
+  title: 'DNABERT: pre-trained Bidirectional Encoder Representations from Transformers model for DNA-language in genome'
+  paper_url: https://doi.org/10.1093/bioinformatics/btab083
+  first_public_date: '2020.09'
+  first_public_url: https://doi.org/10.1101/2020.09.17.301879
+  publication_date: '2021.02'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: general
+  focus: human genome
+  code_url: https://github.com/jerryji1993/DNABERT
+  weights_url: https://huggingface.co/zhihan1996/DNA_bert_6
+  architecture: Transformer encoder
+  tokenization: Overlapping 3–6-mer
+  objective: Masked language modeling
+  parameters: 110M
+  context_length: 512 tokens
+  pretraining_data: Human reference genome (GRCh38)
+  summary: Introduces BERT pre-training for genomic DNA and reusable k-mer representations for regulatory and variant-analysis
+    tasks.
+- name: RNABert
+  title: Informative RNA base embedding for RNA structural alignment and clustering by deep representation learning
+  paper_url: https://doi.org/10.1093/nargab/lqac012
+  first_public_date: '2021.08'
+  first_public_url: https://doi.org/10.1101/2021.08.23.457433
+  publication_date: '2022.01'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: non-coding RNA
+  code_url: https://github.com/mana438/RNABERT
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 0.5M
+  context_length: null
+  pretraining_data: Rfam seed alignments + ncRNA
+  summary: Proposes RNABERT, a BERT-based model pre-trained on Rfam seed alignments using masked language modeling to learn
+    informative RNA-base embeddings for structural alignment and clustering of ncRNAs.
+- name: RNAFM
+  title: Interpretable RNA Foundation Model from Unannotated Data for Highly Accurate RNA Structure and Function Predictions
+  paper_url: https://arxiv.org/abs/2204.00300
+  first_public_date: '2022.04'
+  first_public_url: https://arxiv.org/abs/2204.00300
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: null
+  weights_url: https://huggingface.co/multimolecule/rnafm
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 100M
+  context_length: null
+  pretraining_data: RNAcentral (23M seqs)
+  summary: Presents RNA-FM, a foundation model pre-trained on 23 million non-coding RNA sequences from RNAcentral, achieving
+    state-of-the-art performance on RNA secondary structure prediction, 3D closeness prediction, and functional annotation
+    tasks.
+- name: GPN
+  title: DNA language models are powerful predictors of genome-wide variant effects
+  paper_url: https://doi.org/10.1073/pnas.2311219120
+  first_public_date: '2022.08'
+  first_public_url: https://doi.org/10.1101/2022.08.22.504706
+  publication_date: '2023.10'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: evolution and variant effects
+  code_url: https://github.com/songlab-cal/gpn
+  weights_url: https://huggingface.co/songlab/gpn-brassicales
+  architecture: Dilated convolutional encoder
+  tokenization: Single nucleotide
+  objective: Masked language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Unaligned genomes from related species
+  summary: The Genomic Pre-trained Network learns evolutionary constraint from unaligned genomes and supports zero-shot genome-wide
+    variant-effect prediction.
+- name: MoDNA
+  title: 'MoDNA: Motif-Oriented Pre-training for DNA Language Model'
+  paper_url: https://doi.org/10.1145/3535508.3545512
+  first_public_date: '2022.08'
+  first_public_url: https://doi.org/10.1145/3535508.3545512
+  publication_date: '2022.08'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: motif-aware genome modeling
+  code_url: null
+  weights_url: null
+  architecture: Transformer encoder
+  tokenization: k-mer
+  objective: Motif-oriented masked language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Genomic DNA with motif-guided masking
+  summary: Introduces motif-oriented pre-training so a DNA encoder learns biologically meaningful sequence patterns rather
+    than uniformly masked k-mers.
+- name: MuLan-Methyl
+  title: MuLan-Methyl—multiple transformer-based language models for accurate DNA methylation prediction
+  paper_url: https://doi.org/10.1093/gigascience/giad054
+  first_public_date: '2022.12'
+  first_public_url: https://doi.org/10.1093/gigascience/giad054
+  publication_date: '2023.07'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: DNA methylation
+  code_url: null
+  weights_url: null
+  architecture: Transformer ensemble
+  tokenization: k-mer and learned vocabularies
+  objective: Self-supervised pre-training and task fine-tuning
+  parameters: null
+  context_length: null
+  pretraining_data: DNA fragments and taxonomy lineages
+  summary: Pre-trains five DNA language-model variants and combines them for prediction of multiple DNA methylation types.
+- name: Nucleotide Transformer
+  title: 'Nucleotide Transformer: building and evaluating robust foundation models for human genomics'
+  paper_url: https://doi.org/10.1038/s41592-024-02523-z
+  first_public_date: '2023.01'
+  first_public_url: https://doi.org/10.1101/2023.01.11.523679
+  publication_date: '2024.11'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: general
+  focus: human and multi-species genomes
+  code_url: https://github.com/instadeepai/nucleotide-transformer
+  weights_url: https://huggingface.co/collections/InstaDeepAI/nucleotide-transformer-65099cdde13ff96230f2e592
+  architecture: Transformer encoder
+  tokenization: Non-overlapping 6-mer
+  objective: Masked language modeling
+  parameters: 50M–2.5B
+  context_length: 1,000–2,048 tokens
+  pretraining_data: 3,200 human genomes and 850 multi-species genomes
+  summary: A family of large genomic encoders spanning human-reference, population and multi-species pre-training with reusable
+    embeddings and checkpoints.
+  aliases:
+  - NT
+  - NT-v1
+  - NT-v2
+- name: SpeciesLM
+  title: Species-aware DNA language models capture regulatory elements and their evolution
+  paper_url: https://doi.org/10.1186/s13059-024-03221-x
+  first_public_date: '2023.01'
+  first_public_url: https://doi.org/10.1101/2023.01.26.525670
+  publication_date: '2024.04'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: cross-species regulatory genomics
+  code_url: https://github.com/DennisGankin/species-aware-DNA-LM
+  weights_url: https://huggingface.co/gagneurlab/SpeciesLM
+  architecture: Transformer encoder
+  tokenization: Single nucleotide / overlapping k-mer
+  objective: Masked language modeling
+  parameters: 90M
+  context_length: 1 kb
+  pretraining_data: Regulatory DNA from multiple species
+  summary: Uses species-aware pre-training to capture regulatory grammar and its evolution across taxa.
+- name: DNABERT-2
+  title: 'DNABERT-2: Efficient Foundation Model and Benchmark for Multi-Species Genome'
+  paper_url: https://arxiv.org/abs/2306.15006
+  first_public_date: '2023.06'
+  first_public_url: https://arxiv.org/abs/2306.15006
+  publication_date: '2024.05'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: general
+  focus: multi-species genomes
+  code_url: https://github.com/MAGICS-LAB/DNABERT_2
+  weights_url: https://huggingface.co/zhihan1996/DNABERT-2-117M
+  architecture: Transformer encoder with ALiBi
+  tokenization: BPE
+  objective: Masked language modeling
+  parameters: 117M
+  context_length: About 700 bp pre-training; longer at inference
+  pretraining_data: Multi-species genomes
+  summary: Replaces fixed k-mers with BPE and adds efficient attention components for multi-species genome representation
+    and the GUE benchmark.
+- name: GENA-LM
+  title: 'GENA-LM: a family of open-source foundational DNA language models for long sequences'
+  paper_url: https://doi.org/10.1093/nar/gkae1310
+  first_public_date: '2023.06'
+  first_public_url: https://doi.org/10.1101/2023.06.12.544594
+  publication_date: '2024.12'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: general
+  focus: long genomic sequences
+  code_url: https://github.com/AIRI-Institute/GENA_LM
+  weights_url: https://huggingface.co/AIRI-Institute/gena-lm-bigbird-base-t2t
+  architecture: BERT / BigBird encoder
+  tokenization: BPE
+  objective: Masked language modeling
+  parameters: 110M–340M
+  context_length: Up to 36 kb
+  pretraining_data: Human reference genome
+  summary: Releases BERT- and BigBird-based open DNA encoders with BPE tokenization for long-sequence genome annotation tasks.
+- name: genomicBERT
+  title: 'genomicBERT: A lightweight foundation model for genome analysis using unigram tokenization and a specialized DNA
+    vocabulary'
+  paper_url: https://doi.org/10.1101/2023.05.31.542682
+  first_public_date: '2023.06'
+  first_public_url: https://doi.org/10.1101/2023.05.31.542682
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: general genome representation
+  code_url: null
+  weights_url: null
+  architecture: Transformer encoder
+  tokenization: Unigram DNA vocabulary
+  objective: Masked language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Reference genomic sequences
+  summary: Explores a compact genome encoder with a data-derived unigram vocabulary as an alternative to fixed k-mers.
+- name: HyenaDNA
+  title: 'HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution'
+  paper_url: https://arxiv.org/abs/2306.15794
+  first_public_date: '2023.06'
+  first_public_url: https://arxiv.org/abs/2306.15794
+  publication_date: '2023.12'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: general
+  focus: long-context genome modeling
+  code_url: https://github.com/HazyResearch/hyena-dna
+  weights_url: https://huggingface.co/LongSafari/hyenadna-large-1m-seqlen-hf
+  architecture: Hyena decoder
+  tokenization: Single nucleotide
+  objective: Causal language modeling
+  parameters: 0.4M–6.6M
+  context_length: Up to 1M nt
+  pretraining_data: Human reference genome (GRCh38)
+  summary: Demonstrates million-nucleotide context modeling at single-base resolution with a compact subquadratic Hyena architecture.
+- name: DNAGPT
+  title: 'DNAGPT: A Generalized Pre-trained Tool for Versatile DNA Sequence Analysis Tasks'
+  paper_url: https://arxiv.org/abs/2307.05628
+  first_public_date: '2023.07'
+  first_public_url: https://arxiv.org/abs/2307.05628
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: DNA understanding and generation
+  code_url: https://github.com/TencentAILabHealthcare/DNAGPT
+  weights_url: null
+  architecture: Transformer decoder
+  tokenization: Non-overlapping k-mer
+  objective: Causal LM plus GC-content and order objectives
+  parameters: 0.1B / 3B
+  context_length: 3,072–24,576 bp
+  pretraining_data: Human and multi-organism genomes
+  summary: Combines autoregressive sequence modeling with numerical and ordering objectives for both DNA prediction and generation.
+- name: EpiGePT
+  title: 'EpiGePT: a pretrained transformer-based language model for context-specific human epigenomics'
+  paper_url: https://doi.org/10.1186/s13059-024-03449-7
+  first_public_date: '2023.07'
+  first_public_url: https://doi.org/10.1186/s13059-024-03449-7
+  publication_date: '2024.12'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: multimodal
+  focus: sequence and epigenomics
+  code_url: https://github.com/ZjGaothu/EpiGePT
+  weights_url: null
+  architecture: Transformer encoder
+  tokenization: Genomic bins / sequence features
+  objective: Pre-training with sequence and epigenomic context
+  parameters: null
+  context_length: null
+  pretraining_data: Human genome and epigenomic profiles
+  summary: Integrates DNA sequence context with epigenomic signals to learn transferable, cell-context-specific representations.
+- name: GROVER
+  title: DNA language model GROVER learns sequence context in the human genome
+  paper_url: https://doi.org/10.1038/s42256-024-00872-0
+  first_public_date: '2023.07'
+  first_public_url: https://doi.org/10.1101/2023.07.19.549677
+  publication_date: '2024.07'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: general
+  focus: human genome
+  code_url: https://doi.org/10.5281/zenodo.8373202
+  weights_url: https://huggingface.co/PoetschLab/GROVER
+  architecture: Transformer encoder
+  tokenization: BPE
+  objective: Masked language modeling
+  parameters: null
+  context_length: 510 tokens
+  pretraining_data: Human reference genome
+  summary: Learns a context-sensitive subword vocabulary and genomic representations directly from the human genome.
+- name: Uni-RNA
+  title: 'Uni-RNA: Universal Pre-trained Models for RNA across Species'
+  paper_url: https://www.biorxiv.org/content/10.1101/2023.07.11.548588v1
+  first_public_date: '2023.07'
+  first_public_url: https://www.biorxiv.org/content/10.1101/2023.07.11.548588v1
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: general
+  focus: general RNA
+  code_url: https://github.com/ComDec/unirna_tf
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 400M
+  context_length: null
+  pretraining_data: RNAcentral + MG-RAST + MGnify (1B seqs)
+  summary: Presents Uni-RNA, a 400M-parameter universal RNA model pre-trained on 1B sequences from RNAcentral, MG-RAST, and
+    MGnify, covering RNA across diverse species for general-purpose RNA representation learning.
+- name: AgroNT
+  title: A foundational large language model for edible plant genomes
+  paper_url: https://doi.org/10.1038/s42003-024-06465-2
+  first_public_date: '2023.10'
+  first_public_url: https://doi.org/10.1101/2023.10.24.563624
+  publication_date: '2024.07'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: plant and crop genomes
+  code_url: https://github.com/instadeepai/nucleotide-transformer
+  weights_url: https://huggingface.co/InstaDeepAI/agro-nucleotide-transformer-1b
+  architecture: Transformer encoder
+  tokenization: Non-overlapping 6-mer
+  objective: Masked language modeling
+  parameters: 1B
+  context_length: 1,025 tokens
+  pretraining_data: Reference genomes from 48 plant species
+  summary: A plant-focused Nucleotide Transformer trained across crop-heavy reference genomes for regulatory, expression and
+    variant tasks.
+- name: GPN-MSA
+  title: A DNA language model based on multispecies alignment predicts the effects of genome-wide variants
+  paper_url: https://doi.org/10.1038/s41587-024-02511-w
+  first_public_date: '2023.10'
+  first_public_url: https://doi.org/10.1101/2023.10.10.561776
+  publication_date: '2025.01'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: alignment-based variant effects
+  code_url: https://github.com/songlab-cal/gpn
+  weights_url: https://huggingface.co/songlab/gpn-msa-sapiens
+  architecture: Convolutional sequence model
+  tokenization: Single nucleotide with MSA channels
+  objective: Masked language modeling over alignments
+  parameters: null
+  context_length: null
+  pretraining_data: Whole-genome multispecies alignments
+  summary: Extends GPN with multispecies alignments for genome-wide, zero-shot variant-effect prediction.
+- name: GenSLM
+  title: 'GenSLMs: Genome-scale language models reveal SARS-CoV-2 evolutionary dynamics'
+  paper_url: https://doi.org/10.1177/10943420231201154
+  first_public_date: '2022.10'
+  first_public_url: https://doi.org/10.1101/2022.10.10.511571
+  publication_date: '2023.11'
+  publication_status: peer_reviewed
+  domain: dna_rna
+  scope: specialized
+  focus: mRNA / coding sequence
+  code_url: null
+  weights_url: null
+  architecture: Decoder-only
+  tokenization: Codon-level
+  objective: Causal / generative language modeling
+  parameters: 2.5B-25B
+  context_length: null
+  pretraining_data: 110M+ gene seqs + 1.5M SARS-CoV-2 genomes
+  summary: Develops GenSLMs (up to 25B parameters), genome-scale language models trained on codon-level gene sequences from
+    110M+ genes and 1.5M SARS-CoV-2 genomes, revealing evolutionary dynamics and enabling variant prediction.
+- name: ATOM-1
+  title: 'ATOM-1: A Foundation Model for RNA Structure and Function Built on Chemical Mapping Data'
+  paper_url: https://doi.org/10.1101/2023.12.13.571579
+  first_public_date: '2023.12'
+  first_public_url: https://doi.org/10.1101/2023.12.13.571579
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: multimodal
+  focus: sequence and RNA structure
+  code_url: null
+  weights_url: null
+  architecture: Encoder-decoder
+  tokenization: SNT
+  objective: Masked language modeling with structure-aware objectives
+  parameters: null
+  context_length: null
+  pretraining_data: Chemical mapping sequencing data
+  summary: Proposes ATOM-1, a foundation model trained on chemical mapping data to learn RNA structure-aware representations
+    for secondary and tertiary structure probing and RNA function prediction.
+- name: OmniNA
+  title: A foundation model for nucleotide sequences
+  paper_url: https://academic.oup.com/nar/article/54/6/gkag083/8528802
+  first_public_date: '2024.01'
+  first_public_url: https://doi.org/10.1101/2024.01.14.575543
+  publication_date: '2026.03'
+  publication_status: peer_reviewed
+  domain: dna_rna
+  scope: general
+  focus: unified nucleotide sequences
+  code_url: https://github.com/xilinshen/OmniNA
+  weights_url: https://huggingface.co/XLS/OmniNA-1.7B
+  architecture: Decoder-only
+  tokenization: BPE + annotation prompts
+  objective: Causal / generative language modeling
+  parameters: 66M / 1.7B
+  context_length: null
+  pretraining_data: NCBI NT DNA + RNA sequences + annotations (91.7M seqs, 1.076T bases)
+  summary: Introduces OmniNA, an annotation-aware generative foundation model for nucleic acid sequences trained on NCBI NT
+    nucleotide sequences and annotations spanning genomic DNA and RNA, with reusable representations for genomics and transcriptomics
+    tasks.
+- name: ProkBERT
+  title: 'ProkBERT family: genomic language models for microbiome applications'
+  paper_url: https://doi.org/10.3389/fmicb.2023.1331233
+  first_public_date: '2023.11'
+  first_public_url: https://doi.org/10.1101/2023.11.09.566411
+  publication_date: '2024.01'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: microbial genomes and microbiomes
+  code_url: https://github.com/nbrg-ppcu/prokbert
+  weights_url: https://huggingface.co/neuralbioinfo/prokbert-mini
+  architecture: Transformer encoder
+  tokenization: Local Context-Aware k-mer
+  objective: Masked language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Unlabeled prokaryotic genome sequences
+  summary: A compact family of self-supervised microbial genome encoders using Local Context-Aware tokenization.
+- name: RNA-km
+  title: Language models enable zero-shot prediction of RNA secondary structures including pseudoknots
+  paper_url: https://doi.org/10.1101/2024.01.27.577533
+  first_public_date: '2024.01'
+  first_public_url: https://doi.org/10.1101/2024.01.27.577533
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: specialized
+  focus: non-coding RNA
+  code_url: https://github.com/gongtiansu/RNA-km
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: SNT + k-mer masking
+  objective: Masked / self-supervised language modeling
+  parameters: 152M
+  context_length: null
+  pretraining_data: RNAcentral (23M ncRNA seqs)
+  summary: Proposes RNA-km, a self-supervised RNA language model trained on 23M ncRNA sequences with k-mer masking and relative
+    positional encoding, enabling zero-shot RNA secondary structure prediction including pseudoknots.
+- name: RNAMSM
+  title: Multiple sequence alignment-based RNA language model and its application to structural inference
+  paper_url: https://doi.org/10.1093/nar/gkad1031
+  first_public_date: '2023.03'
+  first_public_url: https://doi.org/10.1101/2023.03.15.532863
+  publication_date: '2024.01'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: non-coding RNA
+  code_url: https://github.com/yikunpku/RNA-MSM
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 95M
+  context_length: null
+  pretraining_data: Rfam families + MSA homologs
+  summary: Introduces RNA-MSM, an unsupervised RNA language model that leverages multiple sequence alignments (MSAs) from
+    homologous RNA families to capture evolutionary and co-evolutionary information for improved structural inference.
+- name: CaLM
+  title: Codon language embeddings provide strong signals for use in protein engineering
+  paper_url: https://www.nature.com/articles/s42256-024-00791-0
+  first_public_date: '2022.12'
+  first_public_url: https://doi.org/10.1101/2022.12.15.519894
+  publication_date: '2024.02'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: mRNA / coding sequence
+  code_url: https://github.com/oxpig/CaLM
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: Codon-level (triplet)
+  objective: Masked / self-supervised language modeling
+  parameters: 86M
+  context_length: null
+  pretraining_data: ~9M non-redundant CDS
+  summary: Introduces CaLM, a codon-level language model trained on ~9M non-redundant coding sequences for predicting and
+    optimizing codon usage, enabling rational mRNA therapeutic design with improved translation efficiency.
+- name: DNABERT-S
+  title: 'DNABERT-S: Learning Species-Aware DNA Embedding with Genome Foundation Models'
+  paper_url: https://arxiv.org/abs/2402.08777
+  first_public_date: '2024.02'
+  first_public_url: https://arxiv.org/abs/2402.08777
+  publication_date: '2025.07'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: species-aware genome embeddings
+  code_url: https://github.com/MAGICS-LAB/DNABERT_S
+  weights_url: https://huggingface.co/zhihan1996/DNABERT-S
+  architecture: Transformer encoder
+  tokenization: BPE
+  objective: Contrastive species representation learning
+  parameters: 117M
+  context_length: null
+  pretraining_data: Multi-species genomes
+  summary: Adapts DNABERT-2 to learn alignment-free species-aware sequence embeddings for taxonomy and metagenomic applications.
+- name: Evo
+  title: Sequence modeling and design from molecular to genome scale with Evo
+  paper_url: https://doi.org/10.1126/science.ado9336
+  first_public_date: '2024.02'
+  first_public_url: https://doi.org/10.1101/2024.02.27.582234
+  publication_date: '2024.11'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: generative
+  focus: microbial genome understanding and design
+  code_url: https://github.com/evo-design/evo
+  weights_url: https://huggingface.co/togethercomputer/evo-1-131k-base
+  architecture: StripedHyena decoder
+  tokenization: Single nucleotide
+  objective: Causal language modeling
+  parameters: 7B
+  context_length: 131 kb pre-training; up to 650 kb generation
+  pretraining_data: OpenGenome prokaryotic and phage genomes
+  summary: A long-context generative genome model that predicts and designs sequences from molecular elements through microbial
+    genomes.
+- name: regLM
+  title: Designing realistic regulatory DNA with autoregressive language models
+  paper_url: https://doi.org/10.1101/gr.279142.124
+  first_public_date: '2024.02'
+  first_public_url: https://doi.org/10.1101/2024.02.14.580373
+  publication_date: '2024.09'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: generative
+  focus: regulatory DNA design
+  code_url: https://github.com/Genentech/regLM
+  weights_url: null
+  architecture: Hyena decoder
+  tokenization: Single nucleotide plus condition tokens
+  objective: Conditional causal language modeling
+  parameters: 6.55M
+  context_length: 160 kb pre-training
+  pretraining_data: Regulatory DNA; initialized from HyenaDNA
+  summary: A conditional autoregressive framework for designing promoters and enhancers with specified activity or cell-type
+    properties.
+- name: Caduceus
+  title: 'Caduceus: Bi-Directional Equivariant Long-Range DNA Sequence Modeling'
+  paper_url: https://arxiv.org/abs/2403.03234
+  first_public_date: '2024.03'
+  first_public_url: https://arxiv.org/abs/2403.03234
+  publication_date: '2024.07'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: general
+  focus: long-context and reverse-complement-aware DNA
+  code_url: https://github.com/kuleshov-group/caduceus
+  weights_url: https://huggingface.co/kuleshov-group/caduceus-ps_seqlen-131k_d_model-256_n_layer-16
+  architecture: Reverse-complement-equivariant BiMamba
+  tokenization: Single nucleotide
+  objective: Masked language modeling
+  parameters: 0.47M / 1.9M
+  context_length: 131 kb
+  pretraining_data: Human reference genome (GRCh38)
+  summary: Builds bidirectionality and reverse-complement symmetry into a Mamba-style DNA encoder for efficient long-range
+    representation learning.
+- name: mRNA-FM
+  title: 'RNA-FM: The RNA Foundation Model'
+  paper_url: https://github.com/ml4bio/RNA-FM
+  first_public_date: '2024.03'
+  first_public_url: https://github.com/ml4bio/RNA-FM
+  publication_date: null
+  publication_status: model_release
+  domain: rna
+  scope: specialized
+  focus: mRNA / coding sequence
+  code_url: https://github.com/ml4bio/RNA-FM
+  weights_url: https://huggingface.co/multimolecule/mrnafm
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 239M
+  context_length: null
+  pretraining_data: mRNA CDS (45M seqs)
+  summary: Adds mRNA-FM as the coding-sequence extension of RNA-FM, pre-trained on 45M mRNA CDS sequences to provide contextual
+    embeddings for mRNA and protein-related downstream tasks.
+- name: SegmentNT
+  title: Annotating the genome at single-nucleotide resolution with DNA foundation models
+  paper_url: https://doi.org/10.1038/s41592-025-02881-2
+  first_public_date: '2024.03'
+  first_public_url: https://doi.org/10.1101/2024.03.14.584712
+  publication_date: '2025.10'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: base-resolution genome annotation
+  code_url: https://github.com/instadeepai/nucleotide-transformer
+  weights_url: https://huggingface.co/InstaDeepAI/segment_nt
+  architecture: U-Net decoder over Nucleotide Transformer
+  tokenization: 6-mer input; single-base output
+  objective: Foundation-model adaptation for semantic segmentation
+  parameters: null
+  context_length: 30–50 kb
+  pretraining_data: Human and multi-species annotated genomes
+  summary: Adapts Nucleotide Transformer representations into a base-resolution segmentation model for diverse genomic elements.
+- name: SpliceBERT
+  title: Self-supervised learning on millions of primary RNA sequences from 72 vertebrates improves sequence-based RNA splicing
+    prediction
+  paper_url: https://doi.org/10.1093/bib/bbae163
+  first_public_date: '2023.02'
+  first_public_url: https://doi.org/10.1101/2023.01.31.526427
+  publication_date: '2024.03'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: RNA type / process specific
+  code_url: https://github.com/chenkenbio/SpliceBERT
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 20M
+  context_length: null
+  pretraining_data: UCSC pre-mRNA (72 species, >2M seqs)
+  summary: Develops SpliceBERT, a 20M-parameter BERT model pre-trained on pre-mRNA sequences from 72 vertebrate species for
+    self-supervised learning of splicing patterns, improving splice site prediction and branchpoint detection.
+- name: GARNET
+  title: RNA language models predict mutations that improve RNA function
+  paper_url: https://doi.org/10.1038/s41467-024-54812-y
+  first_public_date: '2024.04'
+  first_public_url: https://doi.org/10.1101/2024.04.05.588317
+  publication_date: '2024.12'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: generative
+  focus: structured RNA design
+  code_url: null
+  weights_url: null
+  architecture: GPT-style decoder
+  tokenization: Overlapping triplet
+  objective: Causal language modeling with sequence / structure variants
+  parameters: null
+  context_length: null
+  pretraining_data: GTDB-derived structured RNAs linked to growth temperatures
+  summary: Introduces the GARNET dataset and sequence- and structure-aware generative RNA models used to propose experimentally
+    validated thermostabilizing mutations.
+- name: UTR-LM
+  title: A 5′ UTR language model for decoding untranslated regions of mRNA and function predictions
+  paper_url: https://www.nature.com/articles/s42256-024-00823-9
+  first_public_date: '2023.10'
+  first_public_url: https://doi.org/10.1101/2023.10.11.561938
+  publication_date: '2024.04'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: untranslated regions
+  code_url: null
+  weights_url: https://huggingface.co/multimolecule/utrlm-te_el
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 1M
+  context_length: null
+  pretraining_data: Ensembl 5'UTR (>214K seqs + synthetic)
+  summary: Introduces UTR-LM, a language model specifically pre-trained on 5' UTR sequences from Ensembl, predicting mean
+    ribosome loading (translation efficiency) and expression level from UTR sequences alone.
+- name: LucaOne
+  title: Generalized biological foundation model with unified nucleic acid and protein language
+  paper_url: https://www.nature.com/articles/s42256-025-01044-4
+  first_public_date: '2024.05'
+  first_public_url: https://doi.org/10.1101/2024.05.10.592927
+  publication_date: '2025.06'
+  publication_status: peer_reviewed
+  domain: dna_rna
+  scope: general
+  focus: unified nucleotide sequences
+  code_url: https://github.com/LucaOne/LucaOneApp
+  weights_url: https://huggingface.co/LucaGroup/LucaOne-default-step36M
+  architecture: Encoder-only
+  tokenization: Nucleotide + amino-acid tokens
+  objective: Masked / self-supervised language modeling
+  parameters: 1.8B
+  context_length: null
+  pretraining_data: RefSeq DNA/RNA + UniRef50/UniProt/ColabFoldDB proteins
+  summary: Introduces LucaOne, a unified biological foundation model trained on nucleic acid (DNA and RNA) and protein sequences
+    from 169,861 species, supporting reusable embeddings and downstream tasks involving DNA, RNA, proteins, and their interrelated
+    pairs.
+- name: RNAErnie
+  title: Multi-purpose RNA language modelling with motif-aware pretraining and type-guided fine-tuning
+  paper_url: https://www.nature.com/articles/s42256-024-00836-4
+  first_public_date: '2024.05'
+  first_public_url: https://www.nature.com/articles/s42256-024-00836-4
+  publication_date: '2024.05'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: null
+  weights_url: https://huggingface.co/LLM-EDA/RNAErnie
+  architecture: Encoder-only
+  tokenization: Nucleotide + motif
+  objective: Masked / self-supervised language modeling
+  parameters: 105M
+  context_length: null
+  pretraining_data: RNAcentral (23M seqs)
+  summary: Presents RNAErnie, an RNA-focused pre-trained model that combines motif-aware pretraining with type-guided fine-tuning
+    for diverse RNA sequence analysis tasks.
+- name: VQDNA
+  title: 'VQDNA: Unleashing the Power of Vector Quantization for Multi-Species Genomic Sequence Modeling'
+  paper_url: https://arxiv.org/abs/2405.10812
+  first_public_date: '2024.05'
+  first_public_url: https://arxiv.org/abs/2405.10812
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: learned genomic vocabulary
+  code_url: null
+  weights_url: null
+  architecture: Vector-quantized encoder
+  tokenization: Learned hierarchical codebooks
+  objective: Self-supervised vector quantization and sequence modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Multi-species genomes
+  summary: Learns coarse-to-fine genomic vocabularies end to end with hierarchical residual vector quantization instead of
+    fixed k-mers.
+- name: PlantCaduceus
+  title: Cross-species modeling of plant genomes at single-nucleotide resolution using a pretrained DNA language model
+  paper_url: https://doi.org/10.1073/pnas.2421738122
+  first_public_date: '2024.06'
+  first_public_url: https://doi.org/10.1101/2024.06.04.596709
+  publication_date: '2025.06'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: plant genomes
+  code_url: null
+  weights_url: null
+  architecture: Caduceus / BiMamba encoder
+  tokenization: Single nucleotide
+  objective: Masked language modeling
+  parameters: null
+  context_length: Long-context single-base modeling
+  pretraining_data: Cross-species plant genomes
+  summary: A plant-specific Caduceus model that transfers across species for regulatory and functional genomics at nucleotide
+    resolution.
+- name: RFamLlama
+  title: 'RFamLlama: an efficient conditional language model for RNA sequence generation across diverse structural families'
+  paper_url: https://openreview.net/forum?id=dXnQedxEJD
+  first_public_date: '2024.06'
+  first_public_url: https://openreview.net/forum?id=dXnQedxEJD
+  publication_date: '2024.06'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: generative
+  focus: RNA type / process specific
+  code_url: null
+  weights_url: https://huggingface.co/jinyuan22/RFamLlama-base
+  architecture: Decoder-only
+  tokenization: Nucleotide + family
+  objective: Causal / generative language modeling
+  parameters: 13-88M
+  context_length: null
+  pretraining_data: Rfam (>4,000 families, 0.6M seqs)
+  summary: Proposes RFamLlama, a Llama-based autoregressive model for conditional RNA sequence generation conditioned on RNA
+    family labels, generating novel functional ncRNA sequences belonging to over 4,000 Rfam families.
+- name: OmniGenome
+  title: Bridging Sequence-Structure Alignment in RNA Foundation Models
+  paper_url: https://ojs.aaai.org/index.php/AAAI/article/view/35500
+  first_public_date: '2024.07'
+  first_public_url: https://arxiv.org/abs/2407.11242
+  publication_date: '2025.04'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: multimodal
+  focus: sequence and RNA structure
+  code_url: null
+  weights_url: https://huggingface.co/yangheng/OmniGenome-186M
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked language modeling with structure-aware objectives
+  parameters: 52M / 186M
+  context_length: null
+  pretraining_data: OneKP (seq-structure pairs)
+  summary: Introduces OmniGenome (52M/186M parameters), a structure-aware RNA model pre-trained on sequence-structure pairs
+    from the OneKP dataset, aligning RNA sequences with their secondary structures for improved downstream predictions.
+- name: UltraGen
+  title: Decoding the RNA interactome by UltraGen
+  paper_url: https://doi.org/10.21203/rs.3.rs-4461517/v1
+  first_public_date: '2024.07'
+  first_public_url: https://doi.org/10.21203/rs.3.rs-4461517/v1
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: specialized
+  focus: general RNA
+  code_url: null
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 33.5M
+  context_length: null
+  pretraining_data: UltraSelex SiR (10M in vitro-synthesized RNA seqs)
+  summary: Introduces UltraGen, the first RNA language model pre-trained on in vitro-synthesized RNA libraries, using self-supervised
+    learning on 10 million experimentally generated UltraSelex sequences to learn quantitative RNA-target binding properties
+    and transfer across small-molecule, protein, cell, tissue, and viral-interaction tasks.
+  notable_claim: The first RNA language model pre-trained on in vitro-synthesized RNA libraries.
+- name: Codon-NT
+  title: Are genomic language models all you need? Exploring genomic language models on protein downstream tasks
+  paper_url: https://doi.org/10.1093/bioinformatics/btae529
+  first_public_date: '2024.08'
+  first_public_url: https://doi.org/10.1093/bioinformatics/btae529
+  publication_date: '2024.08'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: codon-aware genomic representation
+  code_url: https://github.com/instadeepai/nucleotide-transformer
+  weights_url: https://huggingface.co/InstaDeepAI/nucleotide-transformer-v2-50m-3mer-multi-species
+  architecture: Transformer encoder
+  tokenization: Non-overlapping 3-mer / codon
+  objective: Masked language modeling
+  parameters: 50M
+  context_length: 2,048 tokens
+  pretraining_data: Multi-species coding and genomic sequences
+  summary: A Nucleotide Transformer variant that studies codon tokenization and transfer from genomic pre-training to protein-related
+    tasks.
+- name: CodonBERT
+  title: CodonBERT large language model for mRNA vaccines
+  paper_url: https://doi.org/10.1101/gr.278870.123
+  first_public_date: '2024.08'
+  first_public_url: https://doi.org/10.1101/gr.278870.123
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: specialized
+  focus: mRNA / coding sequence
+  code_url: https://github.com/Sanofi-Public/CodonBERT
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: Codon-aware
+  objective: Masked / self-supervised language modeling
+  parameters: 110M
+  context_length: null
+  pretraining_data: NCBI (10M mRNA CDS)
+  summary: Presents CodonBERT, a BERT-based model pre-trained on 10M mRNA coding sequences with codon-aware tokenization for
+    mRNA sequence representation and vaccine-related design tasks.
+- name: ENBED
+  title: Understanding the natural language of DNA using encoder–decoder foundation models with byte-level precision
+  paper_url: https://doi.org/10.1093/bioadv/vbae117
+  first_public_date: '2023.11'
+  first_public_url: https://arxiv.org/abs/2311.02333
+  publication_date: '2024.08'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: general
+  focus: base-precision DNA understanding and generation
+  code_url: null
+  weights_url: null
+  architecture: Efficient Transformer encoder–decoder
+  tokenization: Single nucleotide / byte level
+  objective: Masked language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Reference genome sequences
+  summary: The Ensemble Nucleotide Byte-level Encoder-Decoder supports base-precise sequence-to-sequence analysis, mutation
+    generation and genome annotation.
+- name: gLM2
+  title: 'The OMG dataset: An Open MetaGenomic corpus for mixed-modality genomic language modeling'
+  paper_url: https://doi.org/10.1101/2024.08.14.607850
+  first_public_date: '2024.08'
+  first_public_url: https://doi.org/10.1101/2024.08.14.607850
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: multimodal
+  focus: metagenomic DNA and translated proteins
+  code_url: null
+  weights_url: https://huggingface.co/tattabio/gLM2_650M
+  architecture: Transformer encoder
+  tokenization: Nucleotide and amino-acid tokens
+  objective: Masked language modeling
+  parameters: 650M
+  context_length: 4,096 tokens
+  pretraining_data: 'OMG corpus: 3.1T bp and 3.3B predicted coding sequences'
+  summary: The first mixed-modality genomic LM trained on interleaved nucleotide and translated protein sequences from the
+    Open MetaGenomic corpus.
+- name: LoRNA SH
+  title: A long-context RNA foundation model for predicting transcriptome architecture
+  paper_url: https://doi.org/10.1101/2024.08.26.609813
+  first_public_date: '2024.08'
+  first_public_url: https://doi.org/10.1101/2024.08.26.609813
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: specialized
+  focus: general RNA
+  code_url: null
+  weights_url: null
+  architecture: Hybrid (StripedHyena)
+  tokenization: Specialized nt + region
+  objective: Masked / self-supervised language modeling
+  parameters: 6.5M
+  context_length: null
+  pretraining_data: Full-length transcriptome architecture data
+  summary: Introduces LoRNA SH, a StripedHyena-based long-context RNA foundation model trained on full-length transcriptome
+    architecture data to predict isoform abundance, isoform structure, and variant effects.
+- name: Pangenome-LM
+  title: Pangenome-Informed Language Models for Synthetic Genome Sequence Generation
+  paper_url: https://doi.org/10.1101/2024.09.18.612131
+  first_public_date: '2024.09'
+  first_public_url: https://doi.org/10.1101/2024.09.18.612131
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: generative
+  focus: pangenome-informed synthetic DNA
+  code_url: null
+  weights_url: null
+  architecture: Autoregressive language model
+  tokenization: Pangenome-derived tokenization
+  objective: Causal language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Human pangenome sequences
+  summary: Introduces three pangenome-based tokenization schemes for efficient, high-utility synthetic genome sequence generation.
+- name: 3UTRBERT
+  title: Deciphering 3'UTR Mediated Gene Regulation Using Interpretable Deep Representation Learning
+  paper_url: https://doi.org/10.1002/advs.202407013
+  first_public_date: '2023.09'
+  first_public_url: https://doi.org/10.1101/2023.09.08.556883
+  publication_date: '2024.10'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: untranslated regions
+  code_url: https://github.com/yangyn533/3UTRBERT
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: 3-mer
+  objective: Masked / self-supervised language modeling
+  parameters: 86M
+  context_length: null
+  pretraining_data: GENCODE 3'UTR (20K seqs)
+  summary: Presents 3UTRBERT, a BERT model pre-trained on GENCODE 3'UTR sequences using 3-mer tokenization, capturing regulatory
+    motifs for predicting mRNA stability, polyadenylation, and subcellular localization.
+- name: BSM
+  title: 'BSM: Small but Powerful Biological Sequence Model for Genes and Proteins'
+  paper_url: https://arxiv.org/abs/2410.11499
+  first_public_date: '2024.10'
+  first_public_url: https://arxiv.org/abs/2410.11499
+  publication_date: null
+  publication_status: preprint
+  domain: dna_rna
+  scope: multimodal
+  focus: DNA, RNA and protein
+  code_url: null
+  weights_url: null
+  architecture: Transformer
+  tokenization: Mixed nucleotide and amino-acid vocabulary
+  objective: Causal mixed-modality language modeling
+  parameters: 110M / 270M
+  context_length: null
+  pretraining_data: RefSeq, gene-related sequences and interleaved biological web sequences
+  summary: A compact mixed-modal biological foundation model that learns DNA/RNA–protein relationships and supports in-context
+    cross-modal tasks.
+- name: DGRNA
+  title: 'DGRNA: a long-context RNA foundation model with bidirectional attention Mamba2'
+  paper_url: https://doi.org/10.1101/2024.10.31.621427
+  first_public_date: '2024.10'
+  first_public_url: https://doi.org/10.1101/2024.10.31.621427
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: null
+  weights_url: null
+  architecture: Hybrid (SSM)
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 100M
+  context_length: null
+  pretraining_data: MARS (100M RNA seqs)
+  summary: Introduces DGRNA, a long-context RNA foundation model based on bidirectional Mamba2 architecture, enabling efficient
+    processing of long RNA sequences up to 100K nucleotides with linear computational complexity.
+- name: GenerRNA
+  title: 'GenerRNA: A generative pre-trained language model for de novo RNA design'
+  paper_url: https://doi.org/10.1371/journal.pone.0310814
+  first_public_date: '2024.02'
+  first_public_url: https://doi.org/10.1101/2024.02.01.578496
+  publication_date: '2024.10'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: generative
+  focus: RNA generation and design
+  code_url: null
+  weights_url: https://huggingface.co/pfnet/GenerRNA
+  architecture: Decoder-only
+  tokenization: BPE
+  objective: Causal / generative language modeling
+  parameters: 350M
+  context_length: null
+  pretraining_data: RNAcentral (16.09M seqs, ~17.4B nt)
+  summary: Presents GenerRNA, a 350M-parameter autoregressive language model pre-trained on 16M RNAcentral sequences (~17.4B
+    nucleotides) using BPE tokenization for de novo RNA sequence generation with controllable properties.
+- name: HELM
+  title: 'HELM: Hierarchical Encoding for mRNA Language Modeling'
+  paper_url: https://arxiv.org/abs/2410.12459
+  first_public_date: '2024.10'
+  first_public_url: https://arxiv.org/abs/2410.12459
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: general
+  focus: mRNA / coding sequence
+  code_url: null
+  weights_url: null
+  architecture: Encoder-Decoder
+  tokenization: Codon-hierarchical
+  objective: Masked / self-supervised language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: mRNA coding sequences
+  summary: Proposes HELM, a hierarchical encoding approach for mRNA language modeling that captures both nucleotide-level
+    and codon-level information through a multi-scale architecture for improved mRNA property prediction.
+- name: LAMAR
+  title: A foundation language model to decipher diverse regulation of RNAs
+  paper_url: https://doi.org/10.1101/2024.10.12.617732
+  first_public_date: '2024.10'
+  first_public_url: https://doi.org/10.1101/2024.10.12.617732
+  publication_date: null
+  publication_status: preprint
+  domain: dna_rna
+  scope: general
+  focus: mammalian and viral genome / transcriptome regulation
+  code_url: null
+  weights_url: https://huggingface.co/nlpai-lab/LAMAR-600m
+  architecture: Transformer encoder
+  tokenization: Nucleotide tokens
+  objective: Masked language modeling
+  parameters: 600M
+  context_length: null
+  pretraining_data: About 15M genome and transcriptome sequences from 225 mammals and 1,569 viruses
+  summary: A genome-and-transcriptome foundation model for shared regulatory rules across RNA processing, translation and
+    stability tasks.
+- name: megaDNA
+  title: A long-context language model for deciphering and generating bacteriophage genomes
+  paper_url: https://doi.org/10.1038/s41467-024-53759-4
+  first_public_date: '2023.12'
+  first_public_url: https://doi.org/10.1101/2023.12.18.572218
+  publication_date: '2024.10'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: generative
+  focus: bacteriophage genomes
+  code_url: https://github.com/lingxusb/megaDNA
+  weights_url: null
+  architecture: Multiscale Transformer decoder
+  tokenization: Single nucleotide
+  objective: Causal language modeling
+  parameters: 145M
+  context_length: 96 kb
+  pretraining_data: Unannotated bacteriophage genomes
+  summary: A multiscale long-context model that represents and generates complete phage-scale sequences at single-nucleotide
+    resolution.
+- name: Orthrus
+  title: 'Orthrus: toward evolutionary and functional RNA foundation models'
+  paper_url: https://www.nature.com/articles/s41592-026-03064-3
+  first_public_date: '2024.10'
+  first_public_url: https://doi.org/10.1101/2024.10.10.617658
+  publication_date: '2026.04'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: RNA type / process specific
+  code_url: null
+  weights_url: https://huggingface.co/quietflamingo/orthrus-large-4-track
+  architecture: Hybrid (SSM)
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 1.3M / 10.1M
+  context_length: null
+  pretraining_data: GENCODE + RefSeq + Zoonomia (32M transcripts)
+  summary: Introduces Orthrus, a Mamba-based mature RNA foundation model using contrastive learning on transcript isoforms
+    and cross-species orthologs to learn evolutionary and functional RNA representations.
+- name: AIDO.RNA
+  title: A Large-Scale Foundation Model for RNA Function and Structure Prediction
+  paper_url: https://doi.org/10.1101/2024.11.28.625345
+  first_public_date: '2024.11'
+  first_public_url: https://doi.org/10.1101/2024.11.28.625345
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: null
+  weights_url: https://huggingface.co/genbio-ai/AIDO.RNA-1.6B
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 650M / 1.6B
+  context_length: null
+  pretraining_data: RNAcentral (42M seqs, ~30B nt)
+  summary: Presents AIDO.RNA, a scalable RNA foundation model with up to 1.6B parameters pre-trained on 42M non-coding RNA
+    sequences (~30B nucleotides), demonstrating strong generalization across diverse RNA tasks.
+- name: MP-RNA
+  title: 'MP-RNA: Unleashing Multi-species RNA Foundation Model via Calibrated Secondary Structure Prediction'
+  paper_url: https://aclanthology.org/2024.findings-emnlp.304/
+  first_public_date: '2024.11'
+  first_public_url: https://aclanthology.org/2024.findings-emnlp.304/
+  publication_date: '2024.11'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: multimodal
+  focus: sequence and RNA structure
+  code_url: null
+  weights_url: https://huggingface.co/yangheng/MP-RNA
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked language modeling with structure-aware objectives
+  parameters: 52-186M
+  context_length: null
+  pretraining_data: OneKP (seq + structure)
+  summary: Develops MP-RNA, a multi-purpose RNA foundation model that integrates sequence and structure information through
+    joint pre-training on the OneKP dataset, supporting diverse RNA tasks within a unified framework.
+- name: AIDO.DNA
+  title: Accurate and General DNA Representations Emerge from Genome Foundation Models at Scale
+  paper_url: https://doi.org/10.1101/2024.12.01.625444
+  first_public_date: '2024.12'
+  first_public_url: https://doi.org/10.1101/2024.12.01.625444
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: general multi-species DNA
+  code_url: https://github.com/genbio-ai/AIDO
+  weights_url: https://huggingface.co/genbio-ai/AIDO.DNA-7B
+  architecture: Transformer encoder
+  tokenization: Single nucleotide
+  objective: Masked language modeling
+  parameters: 7B
+  context_length: 4,096 nt
+  pretraining_data: 10.6B nucleotides from 796 species
+  summary: A large encoder-only DNA module in the AI-driven Digital Organism project, scaled to 7B parameters for broad functional-genomics
+    transfer.
+- name: MethylQUEEN
+  title: 'MethylQUEEN: A Methylation Encoded DNA Foundation Model'
+  paper_url: https://doi.org/10.1101/2024.12.26.630389
+  first_public_date: '2024.12'
+  first_public_url: https://doi.org/10.1101/2024.12.26.630389
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: multimodal
+  focus: DNA sequence and methylation
+  code_url: null
+  weights_url: null
+  architecture: Transformer encoder
+  tokenization: Methylation-aware nucleotide encoding
+  objective: Masked language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: DNA sequences with methylation state
+  summary: Encodes methylation state directly with nucleotide sequence during foundation-model pre-training.
+- name: MxDNA
+  title: 'Model Decides How to Tokenize: Adaptive DNA Sequence Tokenization with MxDNA'
+  paper_url: https://arxiv.org/abs/2412.13716
+  first_public_date: '2024.12'
+  first_public_url: https://arxiv.org/abs/2412.13716
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: adaptive DNA tokenization
+  code_url: null
+  weights_url: null
+  architecture: Sparse mixture-of-convolution tokenization plus encoder
+  tokenization: Learned dynamic tokens
+  objective: Self-supervised masked pre-training
+  parameters: null
+  context_length: null
+  pretraining_data: Genomic DNA sequences
+  summary: Learns discontinuous, overlapping and variable-length DNA token boundaries end to end rather than fixing a vocabulary
+    in advance.
+- name: PDLLMs
+  title: 'PDLLMs: A group of tailored DNA large language models for analyzing plant genomes'
+  paper_url: https://doi.org/10.1016/j.molp.2024.12.006
+  first_public_date: '2024.12'
+  first_public_url: https://doi.org/10.1016/j.molp.2024.12.006
+  publication_date: '2024.12'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: plant genomes
+  code_url: null
+  weights_url: null
+  architecture: Transformer family
+  tokenization: Single nucleotide / k-mer / BPE variants
+  objective: Self-supervised language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Plant genomic sequences
+  summary: A collection of plant-tailored DNA language models designed to compare tokenization and model choices for plant-genome
+    analysis.
+- name: PlantRNA-FM
+  title: An interpretable RNA foundation model for exploring functional RNA motifs in plants
+  paper_url: https://www.nature.com/articles/s42256-024-00946-z
+  first_public_date: '2024.12'
+  first_public_url: https://www.nature.com/articles/s42256-024-00946-z
+  publication_date: '2024.12'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: RNA type / process specific
+  code_url: null
+  weights_url: https://huggingface.co/yangheng/PlantRNA-FM
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 35M
+  context_length: null
+  pretraining_data: OneKP (1,124 plant species transcriptomes)
+  summary: Presents PlantRNA-FM, a foundation model pre-trained on transcriptomes from 1,124 plant species (OneKP dataset),
+    capturing plant-specific RNA regulatory patterns for gene expression prediction and functional annotation.
+- name: RNAGenesis
+  title: 'RNAGenesis: A Generalist Foundation Model for Functional RNA Therapeutics'
+  paper_url: https://www.biorxiv.org/content/10.1101/2024.12.30.630826v2
+  first_public_date: '2024.12'
+  first_public_url: https://www.biorxiv.org/content/10.1101/2024.12.30.630826v2
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: generative
+  focus: RNA generation and design
+  code_url: null
+  weights_url: https://huggingface.co/Zaixi/RNAGenesis
+  architecture: Encoder + Diffusion
+  tokenization: Hybrid N-gram
+  objective: Causal / generative language modeling
+  parameters: 1B
+  context_length: null
+  pretraining_data: RNAcentral clustered ncRNA
+  summary: Proposes RNAGenesis, a 1B-parameter generative RNA model that integrates sequence representation, structure prediction,
+    and de novo functional design, listed here as an adapted / derived RNA design model rather than a core ncRNA pre-training-only
+    FM.
+- name: GenomeOcean
+  title: Uncovering the Genomic Manifold via Scalable Learning from the Global Microbiome
+  paper_url: https://doi.org/10.1101/2025.01.30.635558
+  first_public_date: '2025.01'
+  first_public_url: https://doi.org/10.1101/2025.01.30.635558
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: generative
+  focus: global metagenomes and biosynthetic design
+  code_url: null
+  weights_url: https://huggingface.co/DOEJGI/GenomeOcean-4B
+  architecture: Optimized Transformer decoder
+  tokenization: BPE
+  objective: Causal language modeling
+  parameters: 100M–4B
+  context_length: null
+  pretraining_data: Large-scale co-assembled environmental metagenomes
+  summary: A scalable generative genome foundation model trained directly on diverse global metagenomic co-assemblies for
+    representation and biological sequence generation.
+- name: LncRNA-BERT
+  title: 'LncRNA-BERT: A BERT-based Model for Long Non-coding RNA Classification'
+  paper_url: https://www.biorxiv.org/content/10.1101/2025.01.09.632168v1
+  first_public_date: '2025.01'
+  first_public_url: https://www.biorxiv.org/content/10.1101/2025.01.09.632168v1
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: specialized
+  focus: RNA type / process specific
+  code_url: https://github.com/luukromeijn/lncRNA-Py
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: CSE / k-mer / nt
+  objective: Masked / self-supervised language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: GENCODE + RefSeq + NONCODE (536K seqs)
+  summary: Introduces LncRNA-BERT, a BERT model pre-trained on 536K long non-coding RNA sequences from GENCODE, RefSeq, and
+    NONCODE for lncRNA classification, subcellular localization, and functional prediction.
+- name: METAGENE-1
+  title: 'METAGENE-1: Metagenomic Foundation Model for Pandemic Monitoring'
+  paper_url: https://arxiv.org/abs/2501.02045
+  first_public_date: '2025.01'
+  first_public_url: https://arxiv.org/abs/2501.02045
+  publication_date: null
+  publication_status: preprint
+  domain: dna_rna
+  scope: general
+  focus: unified nucleotide sequences
+  code_url: null
+  weights_url: https://huggingface.co/metagene-ai/METAGENE-1
+  architecture: Decoder-only
+  tokenization: BPE
+  objective: Causal / generative language modeling
+  parameters: 7B
+  context_length: null
+  pretraining_data: Metagenomic DNA + RNA sequences (1.5T bp)
+  summary: Introduces METAGENE-1, a 7B autoregressive metagenomic foundation model pre-trained on diverse metagenomic DNA
+    and RNA sequences, supporting genomic sequence embeddings, pathogen detection, biosurveillance, and pandemic monitoring
+    tasks.
+- name: PhyloGPN
+  title: A Phylogenetic Approach to Genomic Language Modeling
+  paper_url: https://doi.org/10.1007/978-3-031-90252-9_7
+  first_public_date: '2025.01'
+  first_public_url: https://doi.org/10.1007/978-3-031-90252-9_7
+  publication_date: '2025.01'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: phylogeny-aware variant effects
+  code_url: https://github.com/songlab-cal/gpn
+  weights_url: null
+  architecture: Phylogeny-aware genomic encoder
+  tokenization: Single nucleotide
+  objective: Self-supervised phylogenetic language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Phylogenetic genome alignments
+  summary: Uses phylogenetic information during training while retaining alignment-free inference for genomic representation
+    and variant scoring.
+- name: Evo 2
+  title: Genome Modeling and Design Across All Domains of Life with Evo 2
+  paper_url: https://www.nature.com/articles/s41586-026-10176-5
+  first_public_date: '2025.02'
+  first_public_url: https://doi.org/10.1101/2025.02.18.638918
+  publication_date: '2026.03'
+  publication_status: peer_reviewed
+  domain: dna_rna
+  scope: general
+  focus: unified nucleotide sequences
+  code_url: https://github.com/ArcInstitute/evo2
+  weights_url: https://huggingface.co/arcinstitute/evo2_40b
+  architecture: Hybrid (StripedHyena 2)
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 7B / 40B
+  context_length: null
+  pretraining_data: OpenGenome2 DNA + eukaryotic mRNA + ncRNA (RNAcentral/Rfam/Ensembl/NCBI)
+  summary: Introduces Evo 2, an open biological sequence foundation model trained on OpenGenome2 across all domains of life;
+    the released OpenGenome2 composition includes eukaryotic mRNAs and ncRNA sources such as RNAcentral and Rfam, enabling
+    broad nucleotide-sequence prediction and generation.
+- name: EvoFlow-RNA
+  title: 'EvoFlow-RNA: Generating and Representing non-coding RNA with a Language Model'
+  paper_url: https://doi.org/10.1101/2025.02.25.639942
+  first_public_date: '2025.02'
+  first_public_url: https://doi.org/10.1101/2025.02.25.639942
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: generative
+  focus: non-coding RNA representation and design
+  code_url: null
+  weights_url: null
+  architecture: Masked discrete diffusion model
+  tokenization: Single nucleotide
+  objective: Masked discrete diffusion
+  parameters: null
+  context_length: null
+  pretraining_data: Non-coding RNA sequences
+  summary: A bidirectional discrete-diffusion RNA LM that unifies representation learning, unconditional generation and constrained
+    aptamer redesign.
+- name: HybriDNA
+  title: 'HybriDNA: A Hybrid Transformer-Mamba2 Long-Range DNA Language Model'
+  paper_url: https://arxiv.org/abs/2502.10807
+  first_public_date: '2025.02'
+  first_public_url: https://arxiv.org/abs/2502.10807
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: long-context DNA understanding and generation
+  code_url: null
+  weights_url: https://huggingface.co/Mishamq/HybriDNA-7B
+  architecture: Hybrid Transformer–Mamba2 decoder
+  tokenization: Single nucleotide
+  objective: Causal language modeling
+  parameters: 300M / 3B / 7B
+  context_length: 131 kb
+  pretraining_data: Large-scale genomic DNA sequences
+  summary: Combines attention and Mamba2 for single-nucleotide, 131-kb modeling across both DNA understanding benchmarks and
+    regulatory-sequence generation.
+- name: Life-Code
+  title: 'Life-Code: Central Dogma Modeling with Multi-Omics Sequence Unification'
+  paper_url: https://arxiv.org/abs/2502.07299
+  first_public_date: '2025.02'
+  first_public_url: https://arxiv.org/abs/2502.07299
+  publication_date: null
+  publication_status: preprint
+  domain: dna_rna
+  scope: general
+  focus: unified nucleotide sequences
+  code_url: null
+  weights_url: null
+  architecture: Hybrid long-sequence
+  tokenization: Codon-level
+  objective: Masked / self-supervised language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: DNA + RNA/cDNA + amino-acid sequences unified into nucleotide-based sequences
+  summary: Introduces Life-Code, a central-dogma sequence foundation framework that unifies DNA, RNA/cDNA, amino-acid, and
+    multi-omics information into nucleotide-based sequences with codon tokenization and masked modeling over coding and non-coding
+    regions.
+- name: Omni-DNA
+  title: 'Omni-DNA: A Unified Genomic Foundation Model for Cross-Modal and Multi-Task Learning'
+  paper_url: https://arxiv.org/abs/2502.03499
+  first_public_date: '2025.02'
+  first_public_url: https://arxiv.org/abs/2502.03499
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: multimodal
+  focus: cross-modal and multi-task genomics
+  code_url: null
+  weights_url: https://huggingface.co/collections/zehui127/omni-dna
+  architecture: Transformer decoder
+  tokenization: Nucleotide plus task / modality tokens
+  objective: Causal pre-training followed by multi-task tuning
+  parameters: 20M–1B
+  context_length: null
+  pretraining_data: DNA sequences plus task-specific text and image outputs
+  summary: A family of autoregressive DNA models extended with task and modality tokens for joint genomic prediction, text
+    and image outputs.
+- name: UKBioBERT
+  title: Pre-training Genomic Language Model with Variants for Better Modeling Functional Genomics
+  paper_url: https://doi.org/10.1038/s44387-026-00103-4
+  first_public_date: '2025.02'
+  first_public_url: https://doi.org/10.1101/2025.02.26.640468
+  publication_date: '2026.04'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: specialized
+  focus: population variants and functional genomics
+  code_url: null
+  weights_url: null
+  architecture: Transformer encoder
+  tokenization: Nucleotide tokens with population variants
+  objective: Masked language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: UK Biobank genomes with genetic variants
+  summary: Pre-trains UKBioBERT on population variation and uses its embeddings to improve gene-function and expression modeling.
+- name: ChaRNABERT
+  title: Character-level Tokenizations as Powerful Inductive Biases for RNA Foundational Models
+  paper_url: https://openreview.net/forum?id=cAiECLDjzF
+  first_public_date: '2024.11'
+  first_public_url: https://arxiv.org/abs/2411.11808
+  publication_date: '2025.03'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: null
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: Learnable (GBST)
+  objective: Masked / self-supervised language modeling
+  parameters: 8M-650M
+  context_length: null
+  pretraining_data: RNAcentral + NCBI (62M seqs)
+  summary: Proposes ChaRNABERT with Gradient-based Subword Tokenization (GBST) that learns data-driven tokenization during
+    pre-training, outperforming fixed tokenization approaches on RNA structure and function prediction tasks.
+- name: Helix-mRNA
+  title: 'Helix-mRNA: A Hybrid Foundation Model For Full Sequence mRNA Therapeutics'
+  paper_url: https://openreview.net/forum?id=Ky0CkFiVhu
+  first_public_date: '2025.02'
+  first_public_url: https://arxiv.org/abs/2502.13785
+  publication_date: '2025.03'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: mRNA / coding sequence
+  code_url: null
+  weights_url: https://huggingface.co/helical-ai/helix-mRNA
+  architecture: Hybrid (SSM+Attention)
+  tokenization: SNT + codon markers
+  objective: Masked / self-supervised language modeling
+  parameters: Compact
+  context_length: null
+  pretraining_data: mRNA sequences
+  summary: Presents Helix-mRNA, a compact hybrid model combining Mamba2 state space layers with attention mechanisms for efficient
+    mRNA sequence modeling, targeting mRNA stability and translation efficiency prediction.
+- name: mRNA2vec
+  title: 'mRNA2vec: mRNA Embedding with Language Model in the 5′UTR-CDS for mRNA Design'
+  paper_url: https://doi.org/10.1609/aaai.v39i1.32092
+  first_public_date: '2024.08'
+  first_public_url: https://arxiv.org/abs/2408.09048
+  publication_date: '2025.04'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: multimodal
+  focus: 5′UTR and coding sequence
+  code_url: null
+  weights_url: null
+  architecture: Teacher–student Transformer encoder
+  tokenization: Nucleotide / region-aware
+  objective: data2vec plus structure and free-energy pretext tasks
+  parameters: null
+  context_length: null
+  pretraining_data: Paired 5′UTR and CDS sequences
+  summary: Learns contextual mRNA embeddings jointly across UTR and CDS with region-aware masking and RNA structure pretext
+    objectives.
+- name: HAD
+  title: 'HAD: Hybrid Architecture Distillation Outperforms Teacher in Genomic Sequence Modeling'
+  paper_url: https://arxiv.org/abs/2505.20836
+  first_public_date: '2025.05'
+  first_public_url: https://arxiv.org/abs/2505.20836
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: compact genome representation
+  code_url: null
+  weights_url: null
+  architecture: Hybrid distilled encoder
+  tokenization: Nucleotide Transformer tokens
+  objective: Representation distillation plus masked reconstruction
+  parameters: null
+  context_length: null
+  pretraining_data: Genomic DNA with NT-v2-500M teacher representations
+  summary: Distills a large Nucleotide Transformer while jointly reconstructing masked tokens to produce a much smaller genomic
+    encoder.
+- name: JanusDNA
+  title: 'JanusDNA: A Powerful Bi-directional Hybrid DNA Foundation Model'
+  paper_url: https://arxiv.org/abs/2505.17257
+  first_public_date: '2025.05'
+  first_public_url: https://arxiv.org/abs/2505.17257
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: bidirectional long-context DNA
+  code_url: https://github.com/Qihao-Duan/JanusDNA
+  weights_url: null
+  architecture: Hybrid Mamba–attention mixture-of-experts
+  tokenization: Single nucleotide
+  objective: Efficient autoregressive / bidirectional pre-training
+  parameters: null
+  context_length: Up to 1M bp
+  pretraining_data: Large-scale genomic DNA
+  summary: Introduces a bidirectional pre-training paradigm and hybrid sparse architecture that processes million-base contexts
+    at single-base resolution.
+- name: ChatNT
+  title: A multimodal conversational agent for DNA, RNA and protein tasks
+  paper_url: https://doi.org/10.1038/s42256-025-01047-1
+  first_public_date: '2024.04'
+  first_public_url: https://doi.org/10.1101/2024.04.30.591835
+  publication_date: '2025.06'
+  publication_status: peer_reviewed
+  domain: dna_rna
+  scope: multimodal
+  focus: nucleotide sequences and natural-language instructions
+  code_url: https://github.com/instadeepai/nucleotide-transformer
+  weights_url: https://huggingface.co/InstaDeepAI/ChatNT
+  architecture: Nucleotide Transformer encoder plus language decoder
+  tokenization: DNA / RNA tokens and text tokens
+  objective: Multitask biological instruction tuning
+  parameters: null
+  context_length: null
+  pretraining_data: DNA, RNA and protein instruction datasets
+  summary: Connects biological sequence encoders to a conversational language decoder for joint DNA, RNA and protein tasks
+    expressed in natural language.
+- name: LucaVirus
+  title: 'Predicting the evolutionary and functional landscapes of viruses with a unified nucleotide-protein language model:
+    LucaVirus'
+  paper_url: https://doi.org/10.1093/nsr/nwag376
+  first_public_date: '2025.06'
+  first_public_url: https://doi.org/10.1101/2025.06.14.659722
+  publication_date: '2026.06'
+  publication_status: peer_reviewed
+  domain: dna_rna
+  scope: multimodal
+  focus: viral nucleotide and protein sequences
+  code_url: null
+  weights_url: null
+  architecture: Unified biological sequence encoder
+  tokenization: Nucleotide and amino-acid tokens
+  objective: Cross-modal self-supervised language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: 25.4B nucleotide and amino-acid tokens spanning viral diversity
+  summary: A unified viral foundation model that links nucleotide genomes, genes and proteins for virus discovery, function
+    and evolution tasks.
+- name: RiNALMo
+  title: 'RiNALMo: general-purpose RNA language models can generalize well on structure prediction tasks'
+  paper_url: https://www.nature.com/articles/s41467-025-60872-5
+  first_public_date: '2024.02'
+  first_public_url: https://arxiv.org/abs/2403.00043
+  publication_date: '2025.07'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: https://github.com/lbcb-sci/RiNALMo
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 135M-650M
+  context_length: null
+  pretraining_data: RNAcentral (36M ncRNA seqs)
+  summary: Presents RiNALMo, a general-purpose RNA language model (up to 650M parameters) pre-trained on 36M ncRNA sequences,
+    demonstrating that large-scale RNA LMs can generalize effectively to secondary and tertiary structure prediction.
+- name: RNALens
+  title: 'RNALens: A Multi-task RNA Foundation Model'
+  paper_url: https://www.biorxiv.org/content/10.1101/2025.07.20.665722v1
+  first_public_date: '2025.07'
+  first_public_url: https://www.biorxiv.org/content/10.1101/2025.07.20.665722v1
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: general
+  focus: general RNA
+  code_url: https://github.com/oomics/RNALens
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: BPE
+  objective: Masked / self-supervised language modeling
+  parameters: 469M
+  context_length: null
+  pretraining_data: Multispecies genomic + 5'UTR sequences
+  summary: Introduces RNALens, a 469M-parameter multi-task RNA foundation model pre-trained on multispecies genomic and 5'UTR
+    sequences using BPE tokenization, supporting diverse RNA analysis tasks within a unified framework.
+- name: TrinityDNA
+  title: 'TrinityDNA: A Bio-Inspired Foundational Model for Efficient Long-Sequence DNA Modeling'
+  paper_url: https://arxiv.org/abs/2507.19229
+  first_public_date: '2025.07'
+  first_public_url: https://arxiv.org/abs/2507.19229
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: bio-inspired long-sequence DNA
+  code_url: null
+  weights_url: null
+  architecture: Multi-scale attention with groove fusion and gated reverse complement
+  tokenization: Single nucleotide
+  objective: Progressive prokaryote-to-eukaryote pre-training
+  parameters: null
+  context_length: null
+  pretraining_data: Prokaryotic and eukaryotic genomes
+  summary: Combines DNA structural priors, reverse-complement handling and multi-scale attention for efficient long-sequence
+    genomic modeling.
+- name: GEMORNA
+  title: Deep generative models design mRNA sequences with enhanced translational capacity and stability
+  paper_url: https://doi.org/10.1126/science.adr8470
+  first_public_date: '2025.08'
+  first_public_url: https://doi.org/10.1126/science.adr8470
+  publication_date: '2025.08'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: generative
+  focus: full-length therapeutic mRNA
+  code_url: null
+  weights_url: null
+  architecture: Region-specific Transformer generators
+  tokenization: UTR and codon-aware tokens
+  objective: Autoregressive sequence generation and optimization
+  parameters: null
+  context_length: null
+  pretraining_data: Natural mRNA coding sequences and untranslated regions
+  summary: Generates CDS and UTR regions for full-length mRNAs, with experimental validation of enhanced expression and stability.
+- name: PlantCAD2
+  title: 'PlantCAD2: a DNA foundation model for interpreting genomes across flowering plants'
+  paper_url: https://doi.org/10.1101/2025.08.27.672609
+  first_public_date: '2025.08'
+  first_public_url: https://doi.org/10.1101/2025.08.27.672609
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: specialized
+  focus: angiosperm genomes
+  code_url: null
+  weights_url: https://huggingface.co/kuleshov-group/PlantCAD2-Large-l48-d1536
+  architecture: Long-context reverse-complement-aware encoder
+  tokenization: Single nucleotide
+  objective: Masked language modeling
+  parameters: 676M
+  context_length: 8,192 bp
+  pretraining_data: 65 angiosperm genomes
+  summary: A plant-specific long-context foundation model for conservation, regulation, expression and genome annotation across
+    flowering plants.
+- name: StructRFM
+  title: 'StructRFM: Structure-guided RNA Foundation Model'
+  paper_url: https://www.biorxiv.org/content/10.1101/2025.08.06.668731v1
+  first_public_date: '2025.08'
+  first_public_url: https://www.biorxiv.org/content/10.1101/2025.08.06.668731v1
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: multimodal
+  focus: sequence and RNA structure
+  code_url: https://github.com/heqin-zhu/structRFM
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked language modeling with structure-aware objectives
+  parameters: null
+  context_length: null
+  pretraining_data: 21M seq-structure pairs
+  summary: Presents StructRFM, a structure-guided RNA foundation model pre-trained on 21M sequence-structure pairs, integrating
+    predicted secondary structure information during pre-training for enhanced RNA representation learning.
+- name: GPN-Star
+  title: Predicting functional constraints across evolutionary timescales with phylogeny-informed genomic language models
+  paper_url: https://doi.org/10.1101/2025.09.21.677619
+  first_public_date: '2025.09'
+  first_public_url: https://doi.org/10.1101/2025.09.21.677619
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: specialized
+  focus: phylogeny and variant effects
+  code_url: https://github.com/songlab-cal/gpn
+  weights_url: https://huggingface.co/songlab/gpn-star-hg38-v100-200m
+  architecture: Phylogeny-aware genomic encoder
+  tokenization: Single nucleotide with alignment representation
+  objective: Masked evolutionary language modeling
+  parameters: Up to 200M
+  context_length: null
+  pretraining_data: Whole-genome alignments and species trees across multiple evolutionary scales
+  summary: Explicitly combines species trees and whole-genome alignments to learn functional constraint and improve variant-effect
+    prediction across organisms.
+- name: ProtRNA
+  title: 'ProtRNA: A protein-derived RNA language model by cross-modality transfer learning'
+  paper_url: https://www.sciencedirect.com/science/article/pii/S2405471225002042
+  first_public_date: '2024.09'
+  first_public_url: https://doi.org/10.1101/2024.09.10.612218
+  publication_date: '2025.09'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: non-coding RNA
+  code_url: https://github.com/roxie-zhang/ProtRNA
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: RNA tokens
+  objective: Masked / self-supervised language modeling
+  parameters: ESM-2 derived
+  context_length: null
+  pretraining_data: RNAcentral (6M representative seqs)
+  summary: Adapts the protein language model ESM-2 to RNA through cross-modality transfer learning on 6M RNAcentral sequences,
+    providing a parameter- and data-efficient RNA language model.
+- name: RNA-BERTa
+  title: 'DLRNA-BERTa: A transformer approach for RNA-drug binding affinity prediction'
+  paper_url: https://www.biorxiv.org/content/10.1101/2025.09.05.674445v1
+  first_public_date: '2025.09'
+  first_public_url: https://www.biorxiv.org/content/10.1101/2025.09.05.674445v1
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: null
+  weights_url: https://huggingface.co/IlPakoZ/RNA-BERTa9700
+  architecture: Encoder-only
+  tokenization: BPE
+  objective: Masked / self-supervised language modeling
+  parameters: 55.9M
+  context_length: null
+  pretraining_data: Public RNA collections (9.76M seqs)
+  summary: Develops RNA-BERTa, a RoBERTa-based model pre-trained on 9.76M RNA sequences for learning general RNA representations,
+    applied to RNA-drug binding affinity prediction with downstream fine-tuning.
+- name: CodonFM
+  title: Introducing the CodonFM Open Model for RNA Design and Analysis
+  paper_url: https://developer.nvidia.com/blog/introducing-the-codonfm-open-model-for-rna-design-and-analysis/
+  first_public_date: '2025.10'
+  first_public_url: https://developer.nvidia.com/blog/introducing-the-codonfm-open-model-for-rna-design-and-analysis/
+  publication_date: '2025.10'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: mRNA / coding sequence
+  code_url: https://github.com/NVIDIA-Digital-Bio/CodonFM
+  weights_url: https://huggingface.co/nvidia/NV-CodonFM-Encodon-1B-v1
+  architecture: Encoder-only
+  tokenization: Codon-level
+  objective: Masked / self-supervised language modeling
+  parameters: 80M / 600M / 1B
+  context_length: null
+  pretraining_data: RefSeq CDS (131M seqs, 22K+ species)
+  summary: Releases NVIDIA CodonFM / Encodon, a family of codon-level masked language models trained on 131M RefSeq protein-coding
+    sequences for mRNA design, codon optimization, and synonymous or missense variant interpretation.
+- name: RNAtranslator
+  title: 'RNAtranslator: Modeling protein-conditional RNA design as sequence-to-sequence natural language translation'
+  paper_url: https://doi.org/10.1371/journal.pcbi.1013541
+  first_public_date: '2025.03'
+  first_public_url: https://doi.org/10.1101/2025.03.04.641375
+  publication_date: '2025.10'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: generative
+  focus: protein-conditioned RNA design
+  code_url: null
+  weights_url: null
+  architecture: Sequence-to-sequence Transformer
+  tokenization: RNA and amino-acid tokens
+  objective: Conditional sequence generation
+  parameters: null
+  context_length: null
+  pretraining_data: Large-scale protein–RNA interaction pairs
+  summary: Frames protein-conditioned RNA generation as translation and produces candidate binders for both characterized
+    and unseen protein targets.
+- name: BiRNA-BERT
+  title: BiRNA-BERT allows efficient RNA language modeling with adaptive tokenization
+  paper_url: https://www.nature.com/articles/s42003-025-08982-0
+  first_public_date: '2024.07'
+  first_public_url: https://doi.org/10.1101/2024.07.02.601703
+  publication_date: '2025.11'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: https://github.com/buetnlpbio/BiRNA-BERT
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: Dual (NUC + BPE)
+  objective: Masked / self-supervised language modeling
+  parameters: 117M
+  context_length: null
+  pretraining_data: RNAcentral (36M seqs, ~26.4B nt)
+  summary: Introduces BiRNA-BERT, a 117M-parameter encoder trained on 36M ncRNA sequences with adaptive dual tokenization
+    combining nucleotide-level and BPE representations.
+- name: ERNIE-RNA
+  title: 'ERNIE-RNA: an RNA language model with structure-enhanced representations'
+  paper_url: https://www.nature.com/articles/s41467-025-64972-0
+  first_public_date: '2024.03'
+  first_public_url: https://doi.org/10.1101/2024.03.17.585376
+  publication_date: '2025.11'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: null
+  weights_url: https://huggingface.co/multimolecule/ernierna-ss
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 86M
+  context_length: null
+  pretraining_data: RNAcentral (20.4M seqs)
+  summary: Develops ERNIE-RNA with base-pairing-aware attention bias for structure-enhanced pre-training on RNAcentral ncRNAs,
+    improving structure and function prediction tasks.
+- name: G4mer
+  title: 'G4mer: An RNA language model for transcriptome-wide identification of G-quadruplexes and disease variants from population-scale
+    genetic data'
+  paper_url: https://www.nature.com/articles/s41467-025-65020-7
+  first_public_date: '2024.10'
+  first_public_url: https://doi.org/10.1101/2024.10.01.616124
+  publication_date: '2025.11'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: specialized
+  focus: RNA type / process specific
+  code_url: null
+  weights_url: https://huggingface.co/Biociphers/g4mer
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 46M
+  context_length: null
+  pretraining_data: Human transcriptome (G-quadruplex)
+  summary: Develops G4mer, a 46M-parameter interpretable transformer model for predicting RNA G-quadruplex structures in the
+    human transcriptome, providing attention-based interpretability for understanding G4-mediated regulation.
+- name: HydraRNA
+  title: 'HydraRNA: a hybrid architecture based full-length RNA language model'
+  paper_url: https://genomebiology.biomedcentral.com/articles/10.1186/s13059-025-03853-7
+  first_public_date: '2025.03'
+  first_public_url: https://doi.org/10.1101/2025.03.06.641765
+  publication_date: '2025.11'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: https://github.com/GuipengLi/HydraRNA
+  weights_url: null
+  architecture: Hybrid (SSM+Attention)
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: 84M
+  context_length: null
+  pretraining_data: 28.1M RNAs (ncRNA + coding)
+  summary: Introduces HydraRNA, a full-length RNA language model using a hybrid bidirectional state space and attention architecture
+    for both coding and non-coding RNA tasks.
+- name: mRNABERT
+  title: 'mRNABERT: advancing mRNA sequence design with a universal language model and comprehensive dataset'
+  paper_url: https://www.nature.com/articles/s41467-025-65340-8
+  first_public_date: '2025.11'
+  first_public_url: https://www.nature.com/articles/s41467-025-65340-8
+  publication_date: '2025.11'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: mRNA / coding sequence
+  code_url: null
+  weights_url: https://huggingface.co/Taykhoom/mRNABERT
+  architecture: Encoder-only
+  tokenization: Dual tokenization
+  objective: Masked / self-supervised language modeling
+  parameters: 114M
+  context_length: null
+  pretraining_data: 18M mRNA seqs (NCBI, MG-RAST, GWH, MGnify)
+  summary: Introduces mRNABERT, a 114M-parameter BERT model pre-trained on 18M mRNA sequences from diverse databases using
+    dual tokenization, achieving state-of-the-art on mRNA stability, translation efficiency, and expression prediction.
+- name: codonGPT
+  title: 'codonGPT: reinforcement learning on a generative language model enables scalable mRNA design'
+  paper_url: https://academic.oup.com/nar/article/53/22/gkaf1345/8384118
+  first_public_date: '2025.06'
+  first_public_url: https://doi.org/10.1101/2025.06.25.661500
+  publication_date: '2025.12'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: generative
+  focus: mRNA / coding sequence
+  code_url: null
+  weights_url: https://huggingface.co/naniltx/codonGPT
+  architecture: Decoder-only
+  tokenization: Codon-level
+  objective: Causal / generative language modeling
+  parameters: GPT-2 based
+  context_length: null
+  pretraining_data: Model-organism CDS (338K seqs)
+  summary: Introduces codonGPT, a GPT-style generative language model trained exclusively on 338,417 coding mRNA sequences
+    with codon-level tokenization, and demonstrates reinforcement learning for constrained mRNA sequence optimization.
+- name: mRNA-GPT
+  title: Large generative mRNA language foundation model for efficient coding sequence generation and design with mRNA-GPT
+  paper_url: https://www.biorxiv.org/content/10.64898/2025.12.22.695962v1
+  first_public_date: '2025.12'
+  first_public_url: https://www.biorxiv.org/content/10.64898/2025.12.22.695962v1
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: generative
+  focus: mRNA / coding sequence
+  code_url: https://github.com/ZHymLumine/mRNA-GPT/
+  weights_url: null
+  architecture: Decoder-only
+  tokenization: Codon / nucleotide
+  objective: Causal / generative language modeling
+  parameters: 302M
+  context_length: null
+  pretraining_data: NCBI CDS (80M bact. + 83M euk. + 2M arch.)
+  summary: Presents mRNA-GPT, a 302M-parameter autoregressive model pre-trained on 80M bacterial, 83M eukaryotic, and 2M archaeal
+    CDS sequences with codon/nucleotide tokenization for cross-species mRNA understanding and generation.
+- name: NTv3
+  title: A foundational model for joint sequence-function multi-species modeling at scale for long-range genomic prediction
+  paper_url: https://doi.org/10.64898/2025.12.22.695963
+  first_public_date: '2025.12'
+  first_public_url: https://doi.org/10.64898/2025.12.22.695963
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: multimodal
+  focus: long-range genome-to-function modeling and design
+  code_url: https://github.com/instadeepai/nucleotide-transformer
+  weights_url: https://huggingface.co/spaces/InstaDeepAI/ntv3
+  architecture: U-Net-like genomic backbone
+  tokenization: Single nucleotide
+  objective: Masked LM, functional-track post-training and masked diffusion
+  parameters: null
+  context_length: Up to 1 Mb
+  pretraining_data: 9T bp from OpenGenome2 plus 16,000 functional tracks across 24 species
+  summary: Unifies multi-species sequence representation, base-resolution functional prediction, annotation and controllable
+    enhancer generation in one long-context model family.
+  aliases:
+  - Nucleotide Transformer v3
+- name: PlasmidGPT
+  title: Generative design and construction of functional plasmids with a DNA language model
+  paper_url: https://doi.org/10.64898/2025.12.06.692736
+  first_public_date: '2025.12'
+  first_public_url: https://doi.org/10.64898/2025.12.06.692736
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: generative
+  focus: plasmid generation
+  code_url: null
+  weights_url: null
+  architecture: GPT-2-style decoder
+  tokenization: Nucleotide tokens
+  objective: Causal language modeling with circular-aware fine-tuning
+  parameters: null
+  context_length: null
+  pretraining_data: Curated PlasmidScope and Addgene plasmid sequences
+  summary: A plasmid-focused DNA LM whose generated backbones were filtered, synthesized and validated for growth, resistance
+    and GFP expression in E. coli.
+- name: EDEN
+  title: Designing AI-programmable therapeutics with the EDEN family of foundation models
+  paper_url: https://doi.org/10.64898/2026.01.12.699009
+  first_public_date: '2026.01'
+  first_public_url: https://doi.org/10.64898/2026.01.12.699009
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: generative
+  focus: metagenomic therapeutic design
+  code_url: null
+  weights_url: null
+  architecture: Large generative sequence model
+  tokenization: Nucleotide and protein sequence tokens
+  objective: Causal generative language modeling
+  parameters: Up to 28B
+  context_length: null
+  pretraining_data: 'BaseData: 9.7T tokens from environmental and host-associated metagenomes'
+  summary: A metagenomic foundation-model family used for programmable gene insertion, antimicrobial peptide and synthetic
+    microbiome design.
+- name: Botanic0
+  title: 'BOTANIC-0: a series of foundation models for plant genomic data'
+  paper_url: https://doi.org/10.64898/2026.02.23.706817
+  first_public_date: '2026.02'
+  first_public_url: https://doi.org/10.64898/2026.02.23.706817
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: specialized
+  focus: plant genomes
+  code_url: null
+  weights_url: https://huggingface.co/living-models
+  architecture: Transformer encoder family
+  tokenization: Genomic sequence tokens
+  objective: Self-supervised language modeling
+  parameters: 100M–1B
+  context_length: null
+  pretraining_data: 43 phylogenetically diverse plant genomes
+  summary: A released family of plant genomic foundation models for regulatory annotation, expression, variant effects and
+    crop-improvement research.
+- name: GeneZip
+  title: 'GeneZip: Region-Aware Compression for Long Context DNA Modeling'
+  paper_url: https://arxiv.org/abs/2602.17739
+  first_public_date: '2026.02'
+  first_public_url: https://arxiv.org/abs/2602.17739
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: adaptive compression for long-context DNA
+  code_url: null
+  weights_url: null
+  architecture: Dynamic routing compressor plus long-context encoder
+  tokenization: Learned region-aware chunks
+  objective: Language modeling with region-aware compression objectives
+  parameters: 70M–636M
+  context_length: Up to 128 kb
+  pretraining_data: Annotated genomic DNA for compressor training; raw DNA at inference
+  summary: Learns a region-aware compression interface that allocates tokens by genomic information density and enables efficient
+    long-context modeling.
+- name: NUWA
+  title: Large mRNA language foundation modeling with NUWA for unified sequence perception and generation
+  paper_url: https://www.biorxiv.org/content/10.1101/2025.11.01.686058v3
+  first_public_date: '2026.02'
+  first_public_url: https://www.biorxiv.org/content/10.1101/2025.11.01.686058v3
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: general
+  focus: mRNA / coding sequence
+  code_url: https://github.com/zysxmu/NUWA
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: Codon tokens
+  objective: Masked / self-supervised language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Multi-species mRNA CDS (115M seqs)
+  summary: Proposes NUWA, a large mRNA foundation model pre-trained on 115M multi-species coding sequences for unified mRNA
+    sequence perception and generation.
+- name: EVA
+  title: A Long-Context Generative Foundation Model Deciphers RNA Design Principles
+  paper_url: https://www.biorxiv.org/content/10.64898/2026.03.17.712398v2
+  first_public_date: '2026.03'
+  first_public_url: https://www.biorxiv.org/content/10.64898/2026.03.17.712398v2
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: generative
+  focus: RNA generation and design
+  code_url: null
+  weights_url: null
+  architecture: Decoder-only (MoE)
+  tokenization: '-'
+  objective: Causal / generative language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: 114M+ full-length RNA seqs
+  summary: Introduces EVA, a Mixture-of-Experts decoder model for long-context RNA sequence generation, trained on 114M+ full-length
+    RNA sequences for generating diverse functional RNA molecules at unprecedented lengths.
+- name: MergeDNA
+  title: 'MergeDNA: Context-Aware Genome Modeling with Dynamic Tokenization Through Token Merging'
+  paper_url: https://doi.org/10.1609/aaai.v40i1.37032
+  first_public_date: '2025.11'
+  first_public_url: https://arxiv.org/abs/2511.14806
+  publication_date: '2026.03'
+  publication_status: peer_reviewed
+  domain: dna
+  scope: general
+  focus: dynamic genomic tokenization
+  code_url: null
+  weights_url: null
+  architecture: Hierarchical local tokenizer plus latent Transformer
+  tokenization: Context-aware merged tokens
+  objective: Merged-token reconstruction and adaptive masked-token modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Genomic DNA sequences
+  summary: Jointly learns context-dependent token merging and latent sequence representations for efficient genome modeling.
+- name: Pro2RNA
+  title: Designing mRNA coding sequence via multimodal reverse translation language modeling with Pro2RNA
+  paper_url: https://doi.org/10.64898/2026.03.18.712790
+  first_public_date: '2026.03'
+  first_public_url: https://doi.org/10.64898/2026.03.18.712790
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: generative
+  focus: protein- and host-conditioned mRNA design
+  code_url: null
+  weights_url: null
+  architecture: Multimodal sequence-to-sequence model
+  tokenization: Codon, amino-acid and taxonomy tokens
+  objective: Conditional reverse-translation language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Eukaryotic and bacterial mRNA–protein pairs with taxonomy
+  summary: Combines protein, taxonomy and generative RNA language models to produce host-adapted mRNA coding sequences.
+- name: RNAElectra
+  title: 'RNAElectra: An ELECTRA-Style RNA Foundation Model for RNA Regulatory Inference'
+  paper_url: https://doi.org/10.64898/2026.03.15.711950
+  first_public_date: '2026.03'
+  first_public_url: https://doi.org/10.64898/2026.03.15.711950
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: null
+  weights_url: null
+  architecture: Encoder-only
+  tokenization: SNT
+  objective: Masked / self-supervised language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: RNAcentral ncRNAs
+  summary: Proposes RNAElectra, applying the ELECTRA-style replaced token detection pre-training objective to RNA sequences,
+    offering more sample-efficient pre-training compared to masked language modeling approaches.
+- name: RNAret
+  title: Retentive Network promotes efficient RNA language modeling of long sequences
+  paper_url: https://www.nature.com/articles/s42003-026-09757-x
+  first_public_date: '2026.01'
+  first_public_url: https://doi.org/10.5281/zenodo.18271233
+  publication_date: '2026.03'
+  publication_status: peer_reviewed
+  domain: rna
+  scope: general
+  focus: non-coding RNA
+  code_url: https://github.com/DrBlackZJU/RNAret/
+  weights_url: null
+  architecture: Hybrid (RetNet)
+  tokenization: 1/3/5-mer
+  objective: Masked / self-supervised language modeling
+  parameters: 12M
+  context_length: null
+  pretraining_data: RNAcentral (29.8M ncRNA seqs)
+  summary: Introduces RNAret, a Retentive Network-based RNA language model pre-trained with masked language modeling on 29.8M
+    RNAcentral sequences, enabling efficient long-sequence RNA representation learning across interaction, structure, and
+    classification tasks.
+- name: ModernGENA
+  title: 'Back to BERT in 2026: ModernGENA as a Strong, Efficient Baseline for DNA Foundation Models'
+  paper_url: https://doi.org/10.64898/2026.04.21.719816
+  first_public_date: '2026.04'
+  first_public_url: https://doi.org/10.64898/2026.04.21.719816
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: efficient general DNA representation
+  code_url: https://github.com/AIRI-Institute/GENA_LM
+  weights_url: https://huggingface.co/AIRI-Institute/moderngena-base
+  architecture: ModernBERT encoder
+  tokenization: 32k BPE vocabulary
+  objective: Masked language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: Multi-species DNA with regulatory and coding-region upsampling
+  summary: Modernizes the GENA-LM encoder stack to provide a strong, efficient and reproducible BERT baseline for genomic
+    modeling.
+- name: mRNA-GPT (full-length)
+  title: 'mRNA-GPT: A Generative Model for Full-Length mRNA Design and Optimization'
+  paper_url: https://doi.org/10.64898/2026.03.31.715707
+  first_public_date: '2026.04'
+  first_public_url: https://doi.org/10.64898/2026.03.31.715707
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: generative
+  focus: full-length mRNA design
+  code_url: null
+  weights_url: null
+  architecture: Autoregressive Transformer decoder
+  tokenization: Region-aware mRNA tokens
+  objective: Causal pre-training plus reinforcement learning
+  parameters: null
+  context_length: null
+  pretraining_data: 30M full-length natural mRNA sequences
+  summary: Jointly models 5′UTR, CDS and 3′UTR, then uses multi-objective reinforcement learning for stability and translation
+    optimization.
+  aliases:
+  - full-length mRNA-GPT
+- name: GoForth
+  title: 'GoForth: Language Models for RNA Design under Structure, Sequence, and Coding Constraints'
+  paper_url: https://arxiv.org/abs/2605.07608
+  first_public_date: '2026.05'
+  first_public_url: https://arxiv.org/abs/2605.07608
+  publication_date: null
+  publication_status: preprint
+  domain: rna
+  scope: generative
+  focus: constraint-aware RNA design
+  code_url: null
+  weights_url: null
+  architecture: Transformer encoder–decoder
+  tokenization: RNA sequence, structure and coding-condition tokens
+  objective: Conditional forward-trained language modeling
+  parameters: null
+  context_length: null
+  pretraining_data: RNA sequences with witnessed folds and mixed design constraints
+  summary: Generates RNA candidates under simultaneous sequence, structure and coding constraints while learning embeddings
+    of design tasks.
+- name: LDARNet
+  title: 'LDARNet: DNA Adaptive Representation Network with Learnable Tokenization for Genomic Modeling'
+  paper_url: https://arxiv.org/abs/2606.04552
+  first_public_date: '2026.06'
+  first_public_url: https://arxiv.org/abs/2606.04552
+  publication_date: null
+  publication_status: preprint
+  domain: dna
+  scope: general
+  focus: learnable DNA tokenization
+  code_url: null
+  weights_url: null
+  architecture: Hierarchical BiMamba-2 with local attention
+  tokenization: Learned dynamic chunks
+  objective: Masked language modeling with routing regularization
+  parameters: 110M
+  context_length: null
+  pretraining_data: Genomic DNA sequences
+  summary: Adapts dynamic chunking to bidirectional masked genomic modeling and learns biologically interpretable token boundaries
+    without supervision.
