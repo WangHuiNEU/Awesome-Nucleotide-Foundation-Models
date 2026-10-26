@@ -1,2 +1,428 @@
 # Newly discovered candidates pending manual review.
-[]
+- name: Motif-Vocab
+  title: 'Motif-Vocab: StatisticallyCalibrated Transcription-Factor-Identity Tokenization forGenomic Language Models'
+  url: http://arxiv.org/abs/2609.28386v1
+  source: arXiv
+  date: '2026.09'
+  abstract: 'Tokenization is a central design choice in genomic language models, yet most deoxyribonucleic acid (DNA) tokenizers
+    use characters, fixed-length k-mers, or frequency-derived subwords without explicitly using prior information about the
+    specificity of DNA-binding regulatory factors. We introduce Motif-Vocab, a biologically informed tokenizer that scans
+    both DNA strands for statistically calibrated motif matches, emits transcription-factor (TF) identity tokens, and applies
+    nucleotide, $k$-mer, or byte-pair encoding (BPE) to unmatched sequence. Motif-specific null distributions put position-weight
+    matrices (PWMs) of different lengths and degeneracy on a common significance scale; deterministic overlap rules make the
+    representation reproducible. In controlled Bidirectional Encoder Representations from Transformers (BERT) pretraining
+    on two billion base pairs, real motif libraries outperform randomized-motif controls on 54 of 55 in-scope downstream tasks.
+    On a motif-disjoint recognition task derived from DART-Eval Task 2, TF-specific tokens improve macro-F1 by 0.040 over
+    a position-matched generic motif token and by 0.033 over a matched no-motif tokenizer (95\% bootstrap confidence interval:
+    0.027--0.038). Motif tokens also receive stronger attribution and produce larger occlusion effects than shuffled controls.
+    Dense no-motif tokenizers remain strong general-purpose baselines, including a near-tie on the five-task BERT-base panel.
+    Thus, Motif-Vocab is not a universal accuracy replacement; it is a targeted, interpretable inductive bias for motif-sensitive
+    genomic modeling.'
+  status: pending_review
+  domain_hint: dna
+  scope_hint: generative
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:dna
+  - dna:genomic
+  - model:bert
+  - model:language model
+  - model:pretraining
+  - model:transformer
+  - nucleotide:nucleic acid
+  - nucleotide:nucleotide
+  discovery_query: genome language model
+  discovered_at: '2026-10-26'
+  score: 18
+- name: Structure is not mechanism
+  title: 'Structure is not mechanism: high-gain gated-FFN rows across text and genomic foundation models'
+  url: http://arxiv.org/abs/2609.17599v1
+  source: arXiv
+  date: '2026.09'
+  abstract: 'A small number of unusually high-gain parameters can exert disproportionate effects in transformer language models,
+    but whether analogous structures recur in genomic foundation models and whether structural geometry determines functional
+    importance remains unknown. We analyzed high-gain rows in gated feed-forward networks across text and genomic foundation
+    models, including a frozen 22-model causal census. Computing an associated bilinear weight operator exactly, without a
+    diagonal approximation, we tested whether structural extremeness is a transferable mechanism. Activation-derived candidates
+    were functionally enriched relative to random and top-norm same-layer controls, yet neither spectral concentration nor
+    operator magnitude predicted causal effect size, and these associations vanished within the endpoint-homogeneous text-decoder
+    subset. A within-layer sweep of 36 rows in one genomic and one text decoder resolved this into two regimes: below the
+    detector''s acceptance threshold the ratio carried no positive information about causal damage, whereas above it the ratio
+    ordered rows strongly but did not grade severity as a dose-response. The same sweep revealed a second individually catastrophic
+    row invisible to a one-candidate-per-model census, and non-additive damage among co-located critical rows. Case studies
+    showed divergent causal organizations: a robust super-additive pair interaction in DNABERT-2, and in GENERator a sharply
+    position-localized dependence in which preserving or restoring the row''s beginning-of-sequence contribution rescued essentially
+    all native-loss damage. High-gain gated-FFN rows are therefore a recurrent architectural phenotype whose structural prominence
+    acts as an enrichment signal, not a calibrated measure of functional criticality or a specification of causal organization.
+    Enrichment is general, but the mechanism is model-specific.'
+  status: pending_review
+  domain_hint: dna
+  scope_hint: multimodal
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:dna
+  - dna:genomic
+  - model:bert
+  - model:foundation model
+  - model:language model
+  - model:transformer
+  discovery_query: genome foundation model
+  discovered_at: '2026-10-26'
+  score: 15
+- name: GenoTrace
+  title: 'GenoTrace: Inheritable Watermarks for Genome Foundation Model Distillation'
+  url: http://arxiv.org/abs/2609.35881v2
+  source: arXiv
+  date: '2026.09'
+  abstract: Can a genome model retain a detectable record of the synthetic sequences used to train it? We study watermark
+    inheritance through distillation with GenoTrace, a codon-aware extension of green-list watermarking. Two token-level factors
+    modulate the teacher's generation bias using codon position and organism-specific codon usage. The resulting sequences
+    train a smaller student, whose outputs are audited without an active watermark processor. In a three-seed GenomeOcean-500M-to-100M
+    experiment, the joint configuration achieves a mean audit score of 17.88 and 94.5% detection at a fixed threshold. It
+    retains 49.0% detection after key-aware token substitution, compared with 0% for the available single-seed plain-watermark
+    comparator, and 47.0% after combined mechanism-targeted nucleotide edits. Additional experiments establish inherited signal
+    across five organism-conditioned datasets and teacher-student size ratios up to 40. Component ablations and computational
+    sequence-quality assays reveal distinct operating points for detection strength and coding coverage. GenoTrace provides
+    a practical token-level construction and an empirical account of how genomic structure shapes inherited watermark signals.
+    The findings concern shared-tokenizer distillation and the tested editing procedures, with calibration and biological
+    utility treated as separate evaluation requirements.
+  status: pending_review
+  domain_hint: dna_rna
+  scope_hint: generative
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:genome
+  - dna:genomic
+  - model:foundation model
+  - nucleotide:nucleotide
+  - rna:codon
+  discovery_query: genome foundation model
+  discovered_at: '2026-10-26'
+  score: 15
+- name: RAGenome
+  title: 'RAGenome: Scaling Retrieval-Based Genomic Language Models to Long Contexts'
+  url: http://arxiv.org/abs/2610.11761v1
+  source: arXiv
+  date: '2026.10'
+  abstract: The genome holds the blueprint that governs the biological properties of the cell. Consequently, advancing our
+    knowledge of genomic function is crucial both for a broader understanding of biology and for continued biomedical advances.
+    The success of large language models on natural language and protein sequences has motivated similar efforts on genomic
+    data. However, standard genomic language models (gLMs) often require extremely large computational resources and still
+    fall behind traditional methods on some downstream tasks. Recently, MSA-based pretraining has been proposed as an efficient
+    alternative, but existing models are limited to short input contexts, restricting their use to short-range tasks, such
+    as variant effect prediction. In this work, we present RAGenome, the first retrieval-based gLM that scales pretraining
+    to longer contexts (100$\times$ longer than existing MSA-based gLMs), allowing it to capture both across-species evolutionary
+    relationships and within-species longer-range interactions. Trained on whole-genome alignments from 100 vertebrates, RAGenome
+    substantially improves the long-range capabilities of MSA-based gLMs, raising gene finding performance from 0.45 to 0.60,
+    while remaining competitive on purely evolutionary-based tasks like prioritizing pathogenic variants. RAGenome provides
+    competitive gLM performance at a fraction of the training cost, unifying evolutionary modeling and long-range capabilities
+    within a single, flexible, scalable framework. Code is available at https://github.com/PanosAntoniadis/RAGenome.
+  status: pending_review
+  domain_hint: dna_rna
+  scope_hint: multimodal
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:genome
+  - dna:genomic
+  - model:language model
+  - model:pretraining
+  - rna:rna
+  discovery_query: genome language model
+  discovered_at: '2026-10-26'
+  score: 14
+- name: BarcodeMAE+
+  title: 'BarcodeMAE+: Rethinking Masked Pretraining and Global Representations for DNA Barcode Foundation Models'
+  url: http://arxiv.org/abs/2609.35877v1
+  source: arXiv
+  date: '2026.09'
+  abstract: 'Many DNA foundation models are pretrained by masking parts of a sequence and asking the model to reconstruct
+    them. Standard masked pretraining exposes the encoder to special [MASK] tokens that are absent at inference, creating
+    a mismatch between training and downstream use. The role of an explicit global sequence representation such as a [CLS]
+    token and how it should be trained also remain poorly understood for DNA barcodes. We introduce BarcodeMAE+ and study
+    model architecture, global [CLS] representation, and auxiliary pretraining objectives across arthropod COI (BIOSCAN-5M)
+    and fungal ITS (UNITE+INSD) barcodes. Across both barcode regions, the encoder-decoder MAE-LM architecture outperforms
+    its matched encoder-only counterpart in nearly all evaluated configurations, supporting MAE-LM as an effective architectural
+    design for DNA barcode foundation models. A trained global [CLS] representation provides substantial additional gains:
+    on BIOSCAN-5M, [CLS] accuracy increases from 47.53% without an auxiliary objective to 80.65% with cross-entropy genus
+    classification. The best auxiliary objective is region-dependent: cross-entropy performs best on BIOSCAN-5M, whereas pairwise
+    same-genus classification performs best on UNITE+INSD, reaching 73.19% on Yeast and 63.07% on Filamentous Fungi. BarcodeMAE+
+    outperforms published DNA foundation model baselines on BIOSCAN-5M and achieves the highest Yeast accuracy among the evaluated
+    UNITE+INSD baselines using frozen encoder representations. Similarity-weighted softmax KNN voting further stabilizes accuracy
+    as neighbourhood size increases. Overall, encoder-decoder masked pretraining and an explicitly trained global representation
+    are strong design choices for DNA barcode foundation models, while the optimal objective for learning that representation
+    depends on the biological domain.'
+  status: pending_review
+  domain_hint: dna
+  scope_hint: generative
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:dna
+  - model:foundation model
+  - model:pretrained
+  - model:pretraining
+  discovery_query: DNA foundation model
+  discovered_at: '2026-10-26'
+  score: 13
+- name: Needs naming
+  title: What DNA Foundation Models Learn Beyond Sequence Composition
+  url: http://arxiv.org/abs/2610.15711v1
+  source: arXiv
+  date: '2026.10'
+  abstract: Do genomic foundation models (FMs) provide predictive information beyond simple sequence composition? We evaluate
+    frozen representations from five DNA FMs against normalized k-mer frequencies across 57 genomic classification datasets
+    and two exploratory gene-expression regression tasks. Simple k-mer features remain competitive with most models, whereas
+    NTv3 shows a consistent advantage; the ranking is robust to globally fixed and multi-scale k-mer baselines and alternative
+    downstream probes. To test incremental predictive utility directly, we compare global 6-mer features with their concatenation
+    with each FM embedding under a matched Random Forest protocol. NTv3 improves 46 of 57 datasets (mean $Δ$MCC = +0.072),
+    while Caduceus provides smaller gains and the other models do not improve mean MCC. We separately decompose embeddings
+    into a component linearly predictable from 6-mer frequencies and a ridge residual, finding that linear recoverability
+    does not reliably indicate downstream utility. Exact 6-mer-preserving shuffles further reveal task-relevant sequence-order
+    sensitivity, most pronounced for NTv3, although order sensitivity alone does not guarantee predictive improvements. Our
+    results establish compositional features as essential controls and offer complementary diagnostics for evaluating the
+    added value of frozen genomic representations, without making claims about fine-tuning capacity.
+  status: pending_review
+  domain_hint: dna_rna
+  scope_hint: general
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:dna
+  - dna:genomic
+  - model:foundation model
+  - rna:rna
+  discovery_query: DNA foundation model
+  discovered_at: '2026-10-26'
+  score: 12
+- name: Needs naming
+  title: Training-Data Extraction from Genomic Language Models
+  url: http://arxiv.org/abs/2610.15396v1
+  source: arXiv
+  date: '2026.10'
+  abstract: Genomic language models generate long nucleotide continuations from short prefixes, exposing a direct route for
+    studying training-sequence extraction through the generation interface. We present an output-only black-box attack on
+    Evo 2 that selects convergent groups of repeated generations without gradients, token likelihoods, or training-corpus
+    access during candidate selection. Recovered content is then scored by an evaluator combining aligned length, nucleotide
+    identity, match multiplicity, and sequence complexity. Across 304 runs on Evo 2 7B with bacteriophage and plasmid prefixes,
+    the attack yields 888 candidate clusters, of which 85 match training segments of at least 500 bp, giving a cluster-level
+    attack success rate of 9.57%. Final filtering retains 22 uniquely matched extraction events at the 500-bp threshold and
+    15 at 1,000 bp, covering 14 and 7 distinct training-sequence regions, respectively. Within-category source-homology screening
+    retains 11 of the 22 events at a 99% exclusion threshold and four at 98%, with the latter mapping to two reference regions.
+    The results establish convergence among repeated nucleotide generations as a practical output-only signal for recovering
+    long training-sequence segments and characterize how recovery depends on prefix length, cluster size, perplexity, early
+    stopping, and sequence domains.
+  status: pending_review
+  domain_hint: dna
+  scope_hint: generative
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:genomic
+  - model:language model
+  - nucleotide:nucleotide
+  discovery_query: genome language model
+  discovered_at: '2026-10-26'
+  score: 12
+- name: Needs naming
+  title: Scaling RNA Foundation Models through Iterative Refinement
+  url: http://arxiv.org/abs/2610.13106v1
+  source: arXiv
+  date: '2026.10'
+  abstract: Biological function in RNA is encoded across scales, from local sequence motifs to long-range structural dependencies.
+    Conventional RNA foundation models couple parameter capacity and inference depth within a fixed architecture, prescribing
+    a fixed computation graph for each inference. Here we present Eco-RNA, an 80M-parameter RNA foundation model that makes
+    inference depth adjustable through learned iterative refinement. Its shared, input-conditioned Transformer core refines
+    sequence representations through repeated application. The iteration count is selected after training and controls effective
+    depth at fixed model parameters. We train across recurrent depths with masked reconstruction, state regularization, and
+    a one-sided loss that anchors deeper reconstruction to a shallow reference. On the 70-assay RNAGym fitness benchmark,
+    increasing refinement from one to four iterations raises aggregate absolute Spearman correlation from 0.242 to 0.286,
+    with the gain retained through eight iterations. At four iterations, Eco-RNA surpasses the current SOTA Evo 2 40B on all
+    three aggregate fitness metrics despite 500x fewer parameters. Its iteration configurations advance the compute-performance
+    Pareto frontier among the evaluated models. It also outperforms the evaluated baselines in non-coding RNA family classification,
+    RNA secondary-structure prediction, and chemical probing profile prediction. These results establish internal inference
+    computation as an effective scaling dimension for RNA foundation models.
+  status: pending_review
+  domain_hint: rna
+  scope_hint: multimodal
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - model:foundation model
+  - model:transformer
+  - rna:rna
+  discovery_query: RNA foundation model
+  discovered_at: '2026-10-26'
+  score: 11
+- name: Needs naming
+  title: Feasibility of Homomorphic Inference for a Genomic Foundation Model
+  url: http://arxiv.org/abs/2609.16211v1
+  source: arXiv
+  date: '2026.09'
+  abstract: 'Human genomic sequences can identify individuals, cannot be replaced after disclosure, and are the inputs that
+    genomic foundation models are designed to interpret. We assess whether a compute provider can execute a released genomic
+    foundation model without receiving query-derived genomic values in plaintext and whether correctness, memory, or cost
+    prevents complete encrypted inference. We first reproduce the released model on three genomic task families and freeze
+    an independently validated numerical reference. We then implement a client-assisted approximate homomorphic encryption
+    protocol: the provider evaluates linear algebra on ciphertexts, while the key-holding data owner evaluates exact normalization,
+    causal softmax, and activation functions at fixed boundaries. A noninteractive configuration completes one released-weight
+    block but exceeds the tested accelerator-memory envelope when configured for composition. The client-assisted configuration
+    executes all released transformer blocks and the task head for one heldout genomic-signal input at its full prompt length.
+    It matches the frozen final label, peaks at 9,839 mebibytes of accelerator memory, and completes in 6,683 seconds on one
+    accelerator. These results establish arithmetic feasibility for a complete classifier, while repeatability, network transport,
+    and private token-index lookup remain unresolved. The biomedical significance is that, under the stated threat model,
+    a served genomic model can process an encoded sequence without exposing plaintext queryderived activations to the compute
+    provider.'
+  status: pending_review
+  domain_hint: dna
+  scope_hint: generative
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:genomic
+  - model:foundation model
+  - model:transformer
+  discovery_query: genome foundation model
+  discovered_at: '2026-10-26'
+  score: 11
+- name: VANDAM
+  title: 'VANDAM: Viewing a nucleotide sequence with DNA molecular priors'
+  url: http://arxiv.org/abs/2610.00411v1
+  source: arXiv
+  date: '2026.09'
+  abstract: Contemporary Genomic Foundation Models (GFMs) rely on a DNA-as-a-string paradigm that employs masked token prediction
+    objectives for pretraining. However, this abstraction does not explicitly model the biochemical, structural, and physical
+    properties essential to biological function. Many molecular properties can be estimated from sequence using established
+    biophysical models, so their utility lies not in providing an independent modality, but in introducing priors that training
+    objectives can explicitly exploit. We introduce VANDAM, a framework that extends the training of GFMs with DNA molecular
+    priors. In self-supervised training, VANDAM predicts regional molecular properties from pooled representations. When functional
+    labels are available and can reward retaining molecular priors, local features are additionally injected at the input.
+    VANDAM consistently improves downstream performance across four architecture families and nine held-out genomic tasks
+    by complementing token-based objectives. Probing experiments further demonstrate that the use of molecular priors generalizes
+    to other unseen molecular properties.
+  status: pending_review
+  domain_hint: dna
+  scope_hint: general
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:dna
+  - dna:genomic
+  - model:foundation model
+  - model:pretraining
+  - nucleotide:nucleotide
+  discovery_query: genome foundation model
+  discovered_at: '2026-10-26'
+  score: 10
+- name: Portable Semantics, Private Dialects
+  title: 'Portable Semantics, Private Dialects: Reuse and Negative Transfer in Latent Communication Between Language-Model
+    Cells'
+  url: http://arxiv.org/abs/2609.11365v1
+  source: arXiv
+  date: '2026.09'
+  abstract: 'In shared-genome language-model societies, restricted evidence visibility favors reusable, value-indexed latent
+    packet interfaces, whereas the sole high-performing globally visible model in the parent study learned an episode-entangled
+    code. This companion study asks whether independently trained societies share one packet language, where strict zero-shot
+    transfer fails, and whether inherited interface state helps or harms later learning. First, a leakage-controlled causal
+    interoperability audit over all 30 ordered pairs of six independently trained restricted societies -- under sealed held-out
+    structure and a preregistered raw/orthogonal/linear/nonlinear alignment ladder -- shows the six semantically similar interfaces
+    do not form one raw language: one same-initialization pair is exactly interoperable in both directions, a second shows
+    asymmetric partial compatibility, and all 26 cross-initialization directions fail every frozen alignment rung. Second,
+    within the tested decomposition and a single sealed source formulation, a source-span control localizes strict zero-shot
+    failure to interpretation and execution of the new operator instructions. Third, in a matched adaptation factorial, the
+    globally trained communication interface acts as a severe negative-transfer prior: reinitializing only the packet reader,
+    writer, and mouth raises final depth-three accuracy from 0.169 to 0.857. Fourth, across two restricted checkpoints and
+    two independently frozen target streams each, inherited interfaces never exceeded fresh-interface controls by the preregistered
+    0.10 margin. All primary conclusions are bounded to a near-transfer 17-state setting; the negative-transfer factorial
+    concerns one globally visible parent-cohort checkpoint, while an appendix adds a post hoc tagged-global twin case study.'
+  status: pending_review
+  domain_hint: dna
+  scope_hint: multimodal
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:genome
+  - model:language model
+  discovery_query: genome language model
+  discovered_at: '2026-10-26'
+  score: 9
+- name: HyCoSeq
+  title: 'HyCoSeq: Contextual Hyperbolic Representation Learning for Genomic Sequences'
+  url: http://arxiv.org/abs/2609.16925v1
+  source: arXiv
+  date: '2026.09'
+  abstract: Hyperbolic geometry provides a natural inductive bias for genomic representation learning, but existing hyperbolic
+    genomic models primarily use Lorentz convolutions to learn local sequence representations, while their residual pathways
+    do not directly aggregate full Lorentz representations. We propose HyCoSeq, a contextual hyperbolic representation learning
+    framework for genomic sequences. HyCoSeq incorporates weighted Lorentzian residual aggregation into multi-curvature Lorentz
+    encoding, allowing full Lorentz representations to participate directly in geometry-consistent local aggregation. It further
+    introduces a bidirectional long short-term memory network that integrates information from both sequence directions to
+    learn contextual relationships among local representations at different positions within a genomic sequence, thereby extending
+    local hyperbolic convolutional encoding to sequence-level contextualized representations. Extensive experiments across
+    diverse genomic tasks show that HyCoSeq outperforms existing hyperbolic baselines and, without large-scale genomic pretraining,
+    achieves competitive performance against substantially larger pretrained DNA language models.
+  status: pending_review
+  domain_hint: dna
+  scope_hint: general
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:dna
+  - dna:genomic
+  - model:language model
+  - model:pretrained
+  - model:pretraining
+  discovery_query: DNA language model
+  discovered_at: '2026-10-26'
+  score: 9
+- name: Needs naming
+  title: Tracing model-generated DNA with position-independent watermarking
+  url: http://arxiv.org/abs/2610.04763v1
+  source: arXiv
+  date: '2026.10'
+  abstract: Genomic language models can write synthetic DNA that carries no record of its origin. A generation-time watermark
+    could provide a provenance signal, if a verifier can detect it using only the DNA sequence, a key, and published detector
+    settings, without knowing where the generated region starts, which strand it lies on, or how it was divided into six-base
+    tokens. We embed the SynthID tournament watermark in two genomic language models, Carbon and GENERator-v2. The verifier
+    searches both strands, every start position, and four window lengths, and corrects its decision for the whole search.
+    In a detection cohort of 1,544 held-out prompts, it found all 3,088 marked sequences per model, unedited and after one
+    substituted, inserted, or deleted base. For ordinary sequences, the one-sided 95% upper confidence bound on the false-positive
+    rate was at most 0.850%; one bound for the wrong-key control reached 1.015% (Carbon, after a deletion). In a development
+    cohort, neither model showed a detectable change in likelihood or in predefined sequence measures. Under random edits
+    placed without reference to the detector, detection stayed complete or nearly complete up to a 2% per-base edit rate.
+    These results show statistical detection, not biological function, secret-key security, or robustness to an editor who
+    sees the detector.
+  status: pending_review
+  domain_hint: dna_rna
+  scope_hint: generative
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:dna
+  - dna:genomic
+  - model:language model
+  - rna:rna
+  discovery_query: genome language model
+  discovered_at: '2026-10-26'
+  score: 8
+- name: CipherGenome
+  title: 'CipherGenome: Homomorphic Inference for Genomic Mixture-of-Experts'
+  url: http://arxiv.org/abs/2609.35883v2
+  source: arXiv
+  date: '2026.09'
+  abstract: 'Genome foundation models are growing into sparse mixture-of-experts (MoE) networks whose expert weights no longer
+    fit on the machines that hold the sequences, yet sending a private genome to rented accelerators exposes it: we show that
+    a single server hosting one expert recovers the input nucleotides with 99.8% top-1 accuracy. We present CipherGenome,
+    a protocol that keeps the embedding, attention and router of a 15.1B-parameter MoE genome model on a trusted thin client
+    and outsources every expert projection, 95.8% of the parameters, to untrusted and possibly colluding GPU servers under
+    module-LWE encryption. The design exploits three structural facts: expert layers are linear between two SwiGLU gates,
+    expert weights are public, and GPU integer tensor cores can evaluate a ciphertext-weight product exactly modulo $2^{48}$
+    in a single GEMM. The client evaluates the nonlinearity exactly and re-encrypts with fresh secrets, so no polynomial approximation
+    or bootstrapping is ever needed. On 72 windows from 12 bacterial genomes, encryption adds $2.54 \times 10^{-4}$ nats per
+    token of KL divergence (95% CI upper bound $3.95 \times 10^{-4}$), below a pre-registered non-inferiority margin and indistinguishable
+    from bf16 inference, while the same inversion attack falls to chance level. A reusable public hint cuts end-to-end latency
+    by 3.54 times, wire compression reduces traffic 6.8 times, per-layer padding reduces routing leakage from 54.9% to 8.9%
+    accuracy, and HE-compatible int4 experts remain non-inferior to their plaintext counterparts. Per expert and token, the
+    server-side cost is more than six orders of magnitude below a CKKS baseline.'
+  status: pending_review
+  domain_hint: dna
+  scope_hint: generative
+  reason: Matched nucleotide-sequence and language/foundation-model signals; requires manual scope and metadata review.
+  matched_terms:
+  - dna:genome
+  - dna:genomic
+  - model:foundation model
+  - nucleotide:nucleotide
+  discovery_query: genome foundation model
+  discovered_at: '2026-10-26'
+  score: 8
